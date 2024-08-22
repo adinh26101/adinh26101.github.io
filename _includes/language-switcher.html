@@ -1,0 +1,15 @@
+<select id="language-selector">
+    <option value="en" {{ page.lang == 'en' ? 'selected' : '' }}>English</option>
+    <option value="vi" {{ page.lang == 'vi' ? 'selected' : '' }}>Tiếng Việt</option>
+  </select>
+  
+  <script>
+    document.getElementById('language-selector').addEventListener('change', function() {
+      var lang = this.value;
+      var path = window.location.pathname;
+      var newPath = path.replace(/\/(en|vi)\//, '/' + lang + '/');
+      if (!newPath.endsWith('/')) newPath += '/';
+      window.location.href = newPath;
+    });
+  </script>
+  
