@@ -25,7 +25,6 @@ math: true
     - [5.3 FedProx](#-fedprox)
 - [6. Tham khảo](#-tham-khao)
 
-<a name="-gioi-thieu">
 ## 1. Giới thiệu
 
 Hiện nay, việc huấn luyện các mô hình trí tuệ nhân tạo với phương pháp Học máy cổ điển đang phải đối mặt với hai thử thách chính. Một là trong hầu hết các ngành công nghiệp dữ liệu thường bị cô lập, phân tán nhiều nơi. Hai là ngày càng nhiều các chính sách bảo mật dữ liệu. Để giải quyết những khó khăn này một phương pháp học máy với phân tán mới đã được các kỹ sư của Google đề xuất [[1]](#-reference-1).
