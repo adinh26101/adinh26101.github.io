@@ -20,6 +20,9 @@ math: true
     - [3.3 Học liên kết chuyển giao](#-hoc-lien-ket-chuyen-giao)
 - [4. Thuật toán của học liên kết](#-thuat-toan)
 - [5. Các biến thể của học liên kết](#-cac-bien-the)
+    - [5.1 FedSGD](#-fedsgd)
+    - [5.2 FedAvg](#-fedavg)
+    - [5.3 FedProx](#-fedprox)
 - [6. Tham khảo](#-tham-khao)
 
 <a name="-gioi-thieu">
@@ -164,19 +167,74 @@ Một số ký hiệu trong các công thức của thuật toán:
 Mục tiêu của Học liên kết là đào tạo mô hình toàn cục với hiệu suất cao nhất trên tất cả các Node, do đó hàm mục tiêu của Học liên kết sẽ là [[6]](#-reference-6):
 
 $$
-\min f(w) \text{ where } w \in \mathbb{R}^d, \quad f(w) = \frac{1}{n} \sum_{i=1}^n f_i(w)
+\min f(w) \text{ where } w \in \mathbb{R}^d, \quad f(w) = \frac{1}{n} \sum_{i=1}^n f_i(w) \quad (1)
 $$
 
-Trong Học máy, chúng ta thường dùng ký hiệu $$ f_i(w) = l(x_i, y_i; w) $$ để mô tả hàm loss của dự đoán $$(x_i, y_i)$$ với mô hình $$w$$. Giả định rằng có $$K$$ Node tham gia vào quá trình học, ký hiệu $$P_k$$ là dữ liệu tại phân vùng $$k$$, với $$n_k = |P_k|$$. Do đó chúng ta có thể viết lại công thức (1) như sau [[6]](#-reference-6):
+Trong Học máy, chúng ta thường dùng ký hiệu $$ f_i(w) = l(x_i, y_i; w) $$ để mô tả hàm loss của dự đoán $$(x_i, y_i)$$ với mô hình $$w$$. Giả định rằng có $$K$$ Node tham gia vào quá trình học, ký hiệu $$P_k$$ là dữ liệu tại phân vùng $$k$$, với $$ n_k = \lvert P_k \rvert $$. Do đó chúng ta có thể viết lại công thức (1) như sau [[6]](#-reference-6):
 
 $$
-f(w) = \frac{1}{n} \sum_{k=1}^K F_k(w) \text{ where } F_k(w) = \frac{1}{n_k} \sum_{i \in P_k} f_i(w)
+f(w) = \frac{1}{n} \sum_{k=1}^K F_k(w) \text{ where } F_k(w) = \frac{1}{n_k} \sum_{i \in P_k} f_i(w) \quad (2)
 $$
 
+Quy trình chính của Học liên kết:
 
+$$
+\textbf{ServerExecute:}
+$$
+- Khởi tạo $$w_0$$
+- for $$t \in T$$ do:
+  - $m \leftarrow (C \cdot K, 1)$
+  - $$S_t \leftarrow$$ (một tập con ngẫu nhiên với $$m$$ node được chọn)
+  - for $$k \in S_t$$ parallel do:
+    - $w_{t+1}^k \leftarrow \text{ClientUpdate}(k, w_t)$
+  - Tổng hợp phản hồi từ các Node để tạo $$w_{t+1}$$ (phiên bản mô hình toàn cục mới)
+
+$$
+\textbf{ClientUpdate}(k, w_t):
+$$
+- $$\beta \leftarrow$$ chia nhỏ $$P_k$$ thành các batch con có kích thước $$B$$
+- for $$i \in E$$ do:
+  - For batch $$b \in \beta$$ do:
+    - $w \leftarrow w - \eta \nabla l(w; b)$
+- Gửi $$w$$ về Server
 
 <a name="-cac-bien-the">
 ## 5. Các biến thể của học liên kết
+
+<a name="-fedsgd">
+### 5.1 FedSGD
+
+Về cơ bản, thuật toán tối ưu của Học liên kết được xây dựng dựa trên phương pháp giảm Gradient (SGD). Học liên kết dựa trên giảm Gradient (FedSGD) tính toán các Gradient theo từng batch (mỗi batch nghĩa là mỗi Node) trong một vòng lặp Học liên kết [[6]](#-reference-6).
+
+Các cài đặt thông thường khi chúng ta triển khai huấn luyện mô hình với phương pháp FedSGD là tỉ lệ $$C = 1$$, $$B = \infty$$, $$E = 1$$ và $$\eta$$ cố định. Các Node tính toán $$g_k = \nabla F_k(w_t)$$ và phản hồi $$g_k$$ cho Server. Sau đó, Server sẽ tổng hợp mô hình toàn cục mới theo công thức sau [[6]](#-reference-6):
+
+$$
+w_{t+1} \leftarrow \nabla f(w_t) \quad \text{where} \quad \nabla f(w_t) = w_t - \eta \sum_{k=1}^{K} \frac{n_k}{n} g_k \quad (3)
+$$
+
+Cách tiếp cận này có vẻ hiệu quả nhưng yêu cầu số lượng vòng lặp rất lớn để huấn luyện được một mô hình tốt [[7]](#-reference-7).
+
+<a name="-fedavg">
+### 5.2 FedAvg
+
+Cách triển khai dựa trên giảm Gradient (3) còn có thể triển khai như sau: các Node tính toán $$g_k$$ và cập nhật cho mô hình cục bộ $$w_{t+1}^k \leftarrow w_t - \eta g_k$$ và sau đó phản hồi $$w_{t+1}^k$$ cho Server. Sau đó, Server sẽ tổng hợp mô hình toàn cục mới theo công thức sau:
+
+$$
+w_{t+1}^k \leftarrow w_t - \sum_{k=1}^{K} \frac{n_k}{n} g_k \quad (4)
+$$
+
+Khi chúng ta triển khai theo thuật toán này, chúng ta thấy là chúng ta đang tính trung bình các mô hình cục bộ nên phương pháp này gọi là Học liên kết AVG (FedAvg) [[6]](#-reference-6).
+
+Cách triển khai FedAvg sử dụng ba tham số chính là tỉ lệ các Node được chọn mỗi vòng lặp Học liên kết ($$C$$), số vòng lặp cục bộ ($$E$$) và local batch size ($$B$$). Khi chúng ta để $$C = 1$$, $$B = \infty$$, $$E = 1$$ sẽ tương đương với cách triển khai SGD. Với mỗi Node có $$n_k$$ dữ liệu thì số cập nhật mỗi vòng là $$u_k = \frac{E \cdot n_k}{B}$$ [[6]](#-reference-6).
+
+<a name="-fedprox">
+### 5.3 FedProx
+
+Với thuật toán FedAvg, mỗi vòng lặp Học liên kết sẽ chọn một tỉ lệ $$C$$ (0 < $$C$$ < 1) Node để tham gia vào quá trình học. Các Node này sẽ tối ưu hóa mô hình cục bộ bằng phương pháp giảm Gradient, với tham số $$E$$ (local epoch) là cố định nên mô hình cục bộ sẽ được học $$E$$ lần [[6]](#-reference-6). Vì dữ liệu của các Node không giống nhau nên có thể sẽ có trường hợp có Node hội tụ sớm còn có Node thì chưa hội tụ. Không ít trường hợp mô hình cục bộ đã hội tụ sớm và tiếp tục lặp ra xa điểm hội tụ của mô hình toàn cục [[8]](#-reference-8). Để giảm thiểu vấn đề này, chúng ta sử dụng một tham số phạt là $$\mu$$ để kiểm soát sự chênh lệch khác nhau giữa $$w_t$$ và $$w_{t+1}^k$$. Hàm phạt sẽ được đưa vào chung với hàm loss cục bộ theo công thức sau [[8]](#-reference-8):
+
+$$
+h(w; w_0) = F(w) + \frac{\mu}{2} \|w - w_0\|^2 \quad (5)
+$$
 
 <a name="-tham-khao">
 ## 6. Tham Khảo
@@ -193,7 +251,13 @@ $$
 <a href="https://arxiv.org/abs/1902.01046" target="_blank">[4] **Towards Federated Learning at Scale: System Design**, _Keith Bonawitz et al._</a>
 
 <a name="-reference-5"></a>
-<a href="https://arxiv.org/abs/1902.01046" target="_blank">[5] **Differential Privacy: A Survey of Resultsn**, _Cynthia Dwork_</a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-540-79228-4_1" target="_blank">[5] **Differential Privacy: A Survey of Resultsn**, _Cynthia Dwork_</a>
 
 <a name="-reference-6"></a>
-<a href="https://arxiv.org/abs/1902.01046" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
+<a href="https://arxiv.org/abs/1602.05629" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
+
+<a name="-reference-7"></a>
+<a href="https://arxiv.org/abs/1502.03167" target="_blank">[7] **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**, _Sergey Ioffe, Christian Szegedy_</a>
+
+<a name="-reference-8"></a>
+<a href="https://arxiv.org/abs/1812.06127" target="_blank">[8] **Federated Optimization in Heterogeneous Networks**, _T. Li et al._</a>
