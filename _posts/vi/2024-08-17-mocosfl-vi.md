@@ -1,5 +1,5 @@
 ---
-title: "MoCoSFL: ENABLING CROSS-CLIENT COLLABORATIVE SELF-SUPERVISED LEARNING (VI)"
+title: "MoCoSFL: CHO PHÉP HỌC TẬP TỰ GIÁM SÁT CỘNG TÁC GIỮA CLIENTS"
 date: 2024-08-17 10:00:00 +0000
 categories: [Machine Learning, AI]
 tags: [MoCoSFL, Federated Learning, AI, Machine Learning]
