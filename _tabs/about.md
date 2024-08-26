@@ -3,7 +3,7 @@
 icon: fas fa-info-circle
 order: 4
 ---
-🏡 Dak Nong, Vietnam
+> 🏡 Dak Song Commune, Dak Nong Province, Vietnam
 
 _I am a Gen Z international student currently studying in South Korea. I am passionate about learning new technologies, sharing experiences, and personal development._
 
@@ -27,7 +27,7 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 - **Database:** PostgreSQL, SQLAlchemy
 - **Cloud:** GCP (Big Query, Cloud Functions, Cloud Storage, Compute Engine), AWS (Lambda, S3, EC2, EKS, Dynamo DB, RDS)
 - **Communication:** English (TOEIC 645), Vietnamese (native speaker)
-- **Chatbot:** GCP Agent (OpenAI, Gemini), RAG, Agent Prompts, Agent Plugins, Local Small LLM, Chatbot Development
+- **Chatbot:** Chatbot Agent (OpenAI, Gemini), AgentVerxe, Agent Prompts, Agent Plugins, Local Small LLM, Chatbot Development, RAG
 - **Logistics Data & Optimization:** Auto-planning, cost optimization, and streamlined logistics operations
 - **Communication:** English (TOEIC 645), Vietnamese (native speaker)
 

@@ -1,6 +1,6 @@
 ---
 title: "Federated Learning: An Overview"
-date: 2024-08-15 10:00:00 +0000
+date: 2024-08-15-federated-learning 10:00:00 +0000
 categories: [Machine Learning, AI]
 tags: [Federated Learning, AI, Machine Learning]
 author: adinh26101
@@ -40,7 +40,7 @@ Federated Learning, also known as collaborative learning, is a technique in mach
 To ensure the final global model performs well, Federated Learning relies on an iterative process divided into interactions between Nodes and Servers, called federated learning rounds. Each round includes sending the global model to participating Nodes for local training with local data, then aggregating these local models to create a new global model [[3]](#-reference-3).
 
 <p>
-    <img src="/assets/2024-08-15/Federated_learning_process_central_case.png" alt="Federated_learning_process_central_case"/>
+    <img src="/assets/2024-08-15-federated-learning/Federated_learning_process_central_case.png" alt="Federated_learning_process_central_case"/>
     <em>Figure 1. Key processes of Federated Learning.</em>
 </p>
 
@@ -56,7 +56,7 @@ The iterative federated learning process includes the following main steps [[4]]
 ### 2.2 Non-IID Data
 
 <p>
-    <img src="/assets/2024-08-15/Examples-of-simulated-non-IID-data-splits-using-samples-from-a-symmetrical-Dirichlet.png" alt="Examples-of-simulated-non-IID-data-splits-using-samples-from-a-symmetrical-Dirichlet"/>
+    <img src="/assets/2024-08-15-federated-learning/Examples-of-simulated-non-IID-data-splits-using-samples-from-a-symmetrical-Dirichlet.png" alt="Examples-of-simulated-non-IID-data-splits-using-samples-from-a-symmetrical-Dirichlet"/>
     <em>Figure 2. Example of non-IID data.</em>
 </p>
 
@@ -72,7 +72,7 @@ Typically, data distributed across Nodes is non-IID (non-independent and identic
 ### 2.3 Security
 
 <p>
-    <img src="/assets/2024-08-15/data_privacy.png" alt="data_privacy"/>
+    <img src="/assets/2024-08-15-federated-learning/data_privacy.png" alt="data_privacy"/>
     <em>Figure 3. Data Privacy.</em>
 </p>
 
@@ -98,7 +98,7 @@ In federated learning, data often has diverse distributions and characteristics.
 ### 3.1 Vertical Federated Learning
 
 <p>
-    <img src="/assets/2024-08-15/horizontal_federated_learning.png" alt="horizontal_federated_learning"/>
+    <img src="/assets/2024-08-15-federated-learning/horizontal_federated_learning.png" alt="horizontal_federated_learning"/>
     <em>Figure 4. Vertical Federated Learning.</em>
 </p>
 
@@ -114,7 +114,7 @@ $$
 ### 3.2 Horizontal Federated Learning
 
 <p>
-    <img src="/assets/2024-08-15/vertical_federated_learning.png" alt="vertical_federated_learning"/>
+    <img src="/assets/2024-08-15-federated-learning/vertical_federated_learning.png" alt="vertical_federated_learning"/>
     <em>Figure 5. Horizontal Federated Learning.</em>
 </p>
 
@@ -128,7 +128,7 @@ $$
 ### 3.3 Transfer Federated Learning
 
 <p>
-    <img src="/assets/2024-08-15/transfer_learning.png" alt="transfer_learning"/>
+    <img src="/assets/2024-08-15-federated-learning/transfer_learning.png" alt="transfer_learning"/>
     <em>Figure 6. Transfer Federated Learning.</em>
 </p>
 
