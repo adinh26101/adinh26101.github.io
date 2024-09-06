@@ -11,7 +11,7 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 
 - **Music:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,..
 - **Movies:** Animation, Cartoon, Action,..
-- **Reading:** Lại là thằng nhóc Emil, Chuyện con mèo lập kèo cứu sách, The Success Principles.
+- **Reading:** Lại là thằng nhóc Emil, Chuyện con mèo lập kèo cứu sách, The Success Principles, Flow.
 - **Sports:** Soccer, badminton, volleyball,..
 - **Games:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
 
