@@ -26,10 +26,9 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 - **Operations:** Git, Docker, Kubernetes
 - **Database:** PostgreSQL, SQLAlchemy
 - **Cloud:** GCP (Big Query, Cloud Functions, Cloud Storage, Compute Engine), AWS (Lambda, S3, EC2, EKS, Dynamo DB, RDS)
-- **Communication:** English (TOEIC 645), Vietnamese (native speaker)
 - **Chatbot:** Chatbot Agent (OpenAI, Gemini), AgentVerxe, Agent Prompts, Agent Plugins, Local Small LLM, Chatbot Development, RAG
 - **Logistics Data & Optimization:** Auto-planning, cost optimization, and streamlined logistics operations
-- **Communication:** English (TOEIC 645), Vietnamese (native speaker)
+- **Communication:** English, Vietnamese (native speaker)
 
 ## Educations
 
