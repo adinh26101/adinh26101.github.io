@@ -16,7 +16,7 @@ timezone: Asia/Ho_Chi_Minh
 
 title: adinh26101 # the main title
 
-tagline: I am Anh, welcome to my site. # it will display as the sub-title
+tagline: Hello, welcome to my site # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   BLog cá nhân của tớ.
@@ -34,7 +34,7 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Đinh Tuấn Anh
+  name: Anh Dinh
   email: a.dinh26101@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -46,7 +46,7 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: -6FY-JZOH44iAM5lojdPI0aODg8QER4Q-6TgG2qzTWc
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
