@@ -56,12 +56,12 @@ Tạo instance xong rồi, giờ mình setup con instance này nhé.
 1. Mở thông tin chi tiết của instance mới tạo và click vào ô connect
 
 <p>
-    <img src="assets/2024-08-08-deploy-django-to-ec2/keypair.png" alt="keypair"/>
+    <img src="assets/2024-08-08-deploy-django-to-ec2/connect.png" alt="connect"/>
     <em>Hình 4. Connect vào instance.</em>
 </p>
 
 <p>
-    <img src="assets/2024-08-08-deploy-django-to-ec2/keypair.png" alt="keypair"/>
+    <img src="assets/2024-08-08-deploy-django-to-ec2/connect2.png" alt="connect2"/>
     <em>Hình 5. Connect vào instance bằng web browser cho khỏe luôn ha.</em>
 </p>
 

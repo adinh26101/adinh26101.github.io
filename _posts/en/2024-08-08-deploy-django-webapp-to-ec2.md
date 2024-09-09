@@ -56,12 +56,12 @@ Now that the instance is created, let’s set it up.
 1. Open the instance details and click on **Connect**.
 
 <p>
-    <img src="assets/2024-08-08-deploy-django-to-ec2/keypair.png" alt="keypair"/>
+    <img src="assets/2024-08-08-deploy-django-to-ec2/connect.png" alt="connect"/>
     <em>Figure 4. Connecting to the instance.</em>
 </p>
 
 <p>
-    <img src="assets/2024-08-08-deploy-django-to-ec2/keypair.png" alt="keypair"/>
+    <img src="assets/2024-08-08-deploy-django-to-ec2/connect2.png" alt="connect2"/>
     <em>Figure 5. Connect via web browser for convenience.</em>
 </p>
 
