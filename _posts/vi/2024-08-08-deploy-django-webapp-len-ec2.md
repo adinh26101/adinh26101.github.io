@@ -19,7 +19,6 @@ math: true
 ## 1. Giới thiệu
 
 Annyeong haseyo, trong bài post này mình sẽ hướng dẫn cách deploy một Django webapp (web tỏ tình với cờ-rớt) lên EC2 ha.  
-*Các bạn cần đăng ký tài khoản AWS và bật billing để có thể sử dụng free tier nha, không tốn phí đâu, cứ yên tâm!*
 
 <a name="-create-ec2-instance"></a>
 ## 2. Tạo EC2 instance
