@@ -19,7 +19,6 @@ math: true
 ## 1. Introduction
 
 Annyeong haseyo, in this post, I’ll guide you on how to deploy a Django webapp (a love confession website) to EC2.  
-*You need to sign up for an AWS account and enable billing to use the free tier, no worries about cost!*
 
 <a name="-create-ec2-instance"></a>
 ## 2. Create an EC2 instance
