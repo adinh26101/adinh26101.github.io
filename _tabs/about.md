@@ -11,7 +11,7 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 
 - **Music:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,..
 - **Movies:** Animation, Cartoon, Action,..
-- **Reading:** Lại là thằng nhóc Emil, Chuyện con mèo lập kèo cứu sách, The Success Principles, Flow.
+- **Reading:** Lại là thằng nhóc Emil, Chiến lược đại dương xanh, Chuyện con mèo lập kèo cứu sách, The Success Principles, Flow, Không tức giận bạn đã thắng, Cộng tác với kẻ thù.
 - **Sports:** Soccer, badminton, volleyball,..
 - **Games:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
 
@@ -20,10 +20,10 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 - **Data Crawling:** Python (Beautiful Soup, Selenium)
 - **Data Manipulation:** Excel, Python (Pandas, Geopandas, PySpark), SQL
 - **Data Visualization:** Python (Matplotlib, Seaborn, Bokeh, Plotly), Power BI, D3.js
+- **AI/ML Platform:** MLflow, Kubeflow
 - **Web Programming:** HTML, CSS, JavaScript (ReactJS), Python (Django, FastAPI, Flask, Streamlit), Java (Spring Boot)
 - **Android Development:** Java, Kotlin, Jetpack Compose
-- **AI/ML Platform:** MLflow, Kubeflow
-- **Operations:** Git, Docker, Kubernetes
+- **Operations:** Git, Docker, Kubernetes, CI/CD
 - **Database:** PostgreSQL, SQLAlchemy
 - **Cloud:** GCP (Big Query, Cloud Functions, Cloud Storage, Compute Engine), AWS (Lambda, S3, EC2, EKS, Dynamo DB, RDS)
 - **Chatbot:** Chatbot Agent (OpenAI, Gemini), AgentVerxe, Agent Prompts, Agent Plugins, Local Small LLM, Chatbot Development, RAG
