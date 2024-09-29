@@ -3,6 +3,6 @@ This is my personal blog where I share knowledge and stories from a study abroad
 
 ## Here’s a brief guide on Jekyll:
 
-1. Run bundle install in the terminal.
-2. Execute bundle exec jekyll serve to start the server.
+1. Run *bundle install* in the terminal.
+2. Execute *bundle exec jekyll serve* to start the server.
 3. Open localhost:4000 and enjoy!
