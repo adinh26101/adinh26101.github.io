@@ -25,16 +25,16 @@ math: true
     - [5.3 FedProx](#-fedprox)
 - [6. References](#-references)
 
-<a name="-introduction">
+<a href="" name="-introduction">
 ## 1. Introduction
 
 Currently, training AI models with traditional machine learning methods faces two main challenges. First, data is often isolated and distributed across many locations in most industries. Second, there are increasing data privacy policies. To address these issues, a new distributed machine learning method has been proposed by Google's engineers [[1]](#-reference-1).
 
 Federated Learning, also known as collaborative learning, is a technique in machine learning that enables training AI models on data across devices, servers, and distributed data centers without centralizing the data, yet still achieving performance comparable to traditional machine learning methods [[1]](#-reference-1)[[2]](#-reference-2).
 
-<a name="-key-features">
+<a href="" name="-key-features">
 ## 2. Key Features of Federated Learning
-<a name="-iterative-learning">
+<a href="" name="-iterative-learning">
 ### 2.1 Iterative Learning
 
 To ensure the final global model performs well, Federated Learning relies on an iterative process divided into interactions between Nodes and Servers, called federated learning rounds. Each round includes sending the global model to participating Nodes for local training with local data, then aggregating these local models to create a new global model [[3]](#-reference-3).
@@ -52,7 +52,7 @@ The iterative federated learning process includes the following main steps [[4]]
 4. **Feedback**: After training, Nodes send their local models back to the Server for aggregation. If any selected Node fails to respond (e.g., due to connection issues), it will be asked to send feedback in later rounds.
 5. **Completion**: Once the desired results are achieved (number of global rounds or specific performance threshold), the Server finalizes the global model and ends the process.
 
-<a name="-non-iid-data">
+<a href="" name="-non-iid-data">
 ### 2.2 Non-IID Data
 
 <p>
@@ -68,7 +68,7 @@ Typically, data distributed across Nodes is non-IID (non-independent and identic
 - **Concept Shift**: Local Nodes may have the same features but different labels.
 - **Unbalancedness**: The amount of data available at each local Node can vary in size.
 
-<a name="-security">
+<a href="" name="-security">
 ### 2.3 Security
 
 <p>
@@ -80,7 +80,7 @@ Security is a top priority in federated learning. With increasing attention to d
 
 The key idea of federated learning is to train models with local data and only exchange model parameter updates. This helps to protect data fully at the local Node, preventing data leakage while participating in collective learning with other Nodes [[1]](#-reference-1).
 
-<a name="-types-of-federated-learning">
+<a href="" name="-types-of-federated-learning">
 ## 3. Types of Federated Learning Based on Data Distribution Characteristics
 
 In federated learning, data often has diverse distributions and characteristics. To fit different tasks, there are types of federated learning based on data partitioning and characteristics [[1]](#-reference-1).
@@ -94,7 +94,7 @@ In federated learning, data often has diverse distributions and characteristics.
 - $$I$$ denotes the ID space
 - A dataset at a node looks like $$(I, X, Y)$$
 
-<a name="-vertical-federated-learning">
+<a href="" name="-vertical-federated-learning">
 ### 3.1 Vertical Federated Learning
 
 <p>
@@ -110,7 +110,7 @@ $$
 X_i \neq X_j, \quad Y_i \neq Y_j, \quad I_i = I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a name="-horizontal-federated-learning">
+<a href="" name="-horizontal-federated-learning">
 ### 3.2 Horizontal Federated Learning
 
 <p>
@@ -124,7 +124,7 @@ $$
 X_i = X_j, \quad Y_i = Y_j, \quad I_i \neq I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a name="-transfer-federated-learning">
+<a href="" name="-transfer-federated-learning">
 ### 3.3 Transfer Federated Learning
 
 <p>
@@ -142,7 +142,7 @@ $$
 X_i \neq X_j, \quad Y_i \neq Y_j, \quad I_i \neq I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a name="-federated-learning-algorithms">
+<a href="" name="-federated-learning-algorithms">
 ## 4. Federated Learning Algorithms
 
 Several algorithms have been developed to enhance the performance and efficiency of federated learning systems:
@@ -151,10 +151,10 @@ Several algorithms have been developed to enhance the performance and efficiency
 - **Federated Averaging (FedAvg)**: FedAvg combines local training using stochastic gradient descent with model averaging to improve performance and efficiency [[8]](#-reference-8).
 - **Federated Proximal (FedProx)**: FedProx introduces a proximal term to the objective function to handle heterogeneity among local models, improving convergence and robustness [[8]](#-reference-8).
 
-<a name="-cac-bien-the">
+<a href="" name="-variants-of-federated-learning">
 ## 5. Variants of Federated Learning
 
-<a name="-fedsgd">
+<a href="" name="-fedsgd">
 ### 5.1 FedSGD
 
 The basic optimization algorithm for Federated Learning is built on Stochastic Gradient Descent (SGD). Federated Learning with Stochastic Gradient Descent (FedSGD) computes gradients for each batch (where each batch represents each Node) during a Federated Learning round [[6]](#-reference-6).
@@ -167,7 +167,7 @@ $$
 
 This approach seems effective but requires a large number of rounds to train a good model [[7]](#-reference-7).
 
-<a name="-fedavg">
+<a href="" name="-fedavg">
 ### 5.2 FedAvg
 
 The SGD-based approach (3) can also be implemented as follows: Nodes compute $$g_k$$ and update the local model as $$w_{t+1}^k \leftarrow w_t - \eta g_k$$, then send $$w_{t+1}^k$$ back to the Server. The Server then aggregates the new global model using the formula:
@@ -180,7 +180,7 @@ This implementation averages local models, so it is called Federated Averaging (
 
 The FedAvg implementation uses three main parameters: the ratio of Nodes selected per Federated Learning round ($$C$$), the number of local epochs ($$E$$), and the local batch size ($$B$$). Setting $$C = 1$$, $$B = \infty$$, $$E = 1$$ corresponds to SGD. For each Node with $$n_k$$ data, the number of updates per round is $$u_k = \frac{E \cdot n_k}{B}$$ [[6]](#-reference-6).
 
-<a name="-fedprox">
+<a href="" name="-fedprox">
 ### 5.3 FedProx
 
 With the FedAvg algorithm, each Federated Learning round selects a fraction $$C$$ (0 < $$C$$ < 1) of Nodes to participate in the learning process. These Nodes optimize the local model using Gradient Descent, with a fixed parameter $$E$$ (local epoch), so the local model is trained $$E$$ times [[6]](#-reference-6). Since data across Nodes is not identical, some Nodes may converge earlier while others may not. Often, local models converge early and diverge from the convergence point of the global model [[8]](#-reference-8). To minimize this issue, a penalty parameter $$\mu$$ is used to control the discrepancy between $$w_t$$ and $$w_{t+1}^k$$. The penalty term is added to the local loss function as follows [[8]](#-reference-8):
@@ -189,28 +189,28 @@ $$
 h(w; w_0) = F(w) + \frac{\mu}{2} \|w - w_0\|^2 \quad (5)
 $$
 
-<a name="-tham-khao">
+<a href="" name="-references">
 ## 6. References
-<a name="-reference-1"></a>
-<a href="https://doi.org/10.48550/arXiv.2007.07224" target="_blank">[1] **Federated Machine Learning: Concept and Applications**, _Qiang Yang et al._</a>
+<a href="" name="-reference-1"></a>
+<a href="" href="https://doi.org/10.48550/arXiv.2007.07224" target="_blank">[1] **Federated Machine Learning: Concept and Applications**, _Qiang Yang et al._</a>
 
-<a name="-reference-2"></a>
-<a href="https://en.wikipedia.org/wiki/Federated_learning" target="_blank">[2] **Federated Learning**, _Wikipedia_</a>
+<a href="" name="-reference-2"></a>
+<a href="" href="https://en.wikipedia.org/wiki/Federated_learning" target="_blank">[2] **Federated Learning**, _Wikipedia_</a>
 
-<a name="-reference-3"></a>
-<a href="https://arxiv.org/abs/1912.04977" target="_blank">[3] **Advances and Open Problems in Federated Learning**, _Peter Kairouz et al._</a>
+<a href="" name="-reference-3"></a>
+<a href="" href="https://arxiv.org/abs/1912.04977" target="_blank">[3] **Advances and Open Problems in Federated Learning**, _Peter Kairouz et al._</a>
 
-<a name="-reference-4"></a>
-<a href="https://arxiv.org/abs/1902.01046" target="_blank">[4] **Towards Federated Learning at Scale: System Design**, _Keith Bonawitz et al._</a>
+<a href="" name="-reference-4"></a>
+<a href="" href="https://arxiv.org/abs/1902.01046" target="_blank">[4] **Towards Federated Learning at Scale: System Design**, _Keith Bonawitz et al._</a>
 
-<a name="-reference-5"></a>
-<a href="https://link.springer.com/chapter/10.1007/978-3-540-79228-4_1" target="_blank">[5] **Differential Privacy: A Survey of Results**, _Cynthia Dwork_</a>
+<a href="" name="-reference-5"></a>
+<a href="" href="https://link.springer.com/chapter/10.1007/978-3-540-79228-4_1" target="_blank">[5] **Differential Privacy: A Survey of Results**, _Cynthia Dwork_</a>
 
-<a name="-reference-6"></a>
-<a href="https://arxiv.org/abs/1602.05629" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
+<a href="" name="-reference-6"></a>
+<a href="" href="https://arxiv.org/abs/1602.05629" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
 
-<a name="-reference-7"></a>
-<a href="https://arxiv.org/abs/1502.03167" target="_blank">[7] **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**, _Sergey Ioffe, Christian Szegedy_</a>
+<a href="" name="-reference-7"></a>
+<a href="" href="https://arxiv.org/abs/1502.03167" target="_blank">[7] **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**, _Sergey Ioffe, Christian Szegedy_</a>
 
-<a name="-reference-8"></a>
-<a href="https://arxiv.org/abs/1812.06127" target="_blank">[8] **Federated Optimization in Heterogeneous Networks**, _T. Li et al._</a>
+<a href="" name="-reference-8"></a>
+<a href="" href="https://arxiv.org/abs/1812.06127" target="_blank">[8] **Federated Optimization in Heterogeneous Networks**, _T. Li et al._</a>
