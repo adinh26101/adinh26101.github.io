@@ -25,16 +25,16 @@ math: true
     - [5.3 FedProx](#-fedprox)
 - [6. References](#-references)
 
-<a href="" name="-introduction">
+<a href="#-introduction" name="-introduction">
 ## 1. Introduction
 
 Currently, training AI models with traditional machine learning methods faces two main challenges. First, data is often isolated and distributed across many locations in most industries. Second, there are increasing data privacy policies. To address these issues, a new distributed machine learning method has been proposed by Google's engineers [[1]](#-reference-1).
 
 Federated Learning, also known as collaborative learning, is a technique in machine learning that enables training AI models on data across devices, servers, and distributed data centers without centralizing the data, yet still achieving performance comparable to traditional machine learning methods [[1]](#-reference-1)[[2]](#-reference-2).
 
-<a href="" name="-key-features">
+<a href="#-key-features" name="-key-features">
 ## 2. Key Features of Federated Learning
-<a href="" name="-iterative-learning">
+<a href="#-iterative-learning" name="-iterative-learning">
 ### 2.1 Iterative Learning
 
 To ensure the final global model performs well, Federated Learning relies on an iterative process divided into interactions between Nodes and Servers, called federated learning rounds. Each round includes sending the global model to participating Nodes for local training with local data, then aggregating these local models to create a new global model [[3]](#-reference-3).
@@ -52,7 +52,7 @@ The iterative federated learning process includes the following main steps [[4]]
 4. **Feedback**: After training, Nodes send their local models back to the Server for aggregation. If any selected Node fails to respond (e.g., due to connection issues), it will be asked to send feedback in later rounds.
 5. **Completion**: Once the desired results are achieved (number of global rounds or specific performance threshold), the Server finalizes the global model and ends the process.
 
-<a href="" name="-non-iid-data">
+<a href="#-non-iid-data" name="-non-iid-data">
 ### 2.2 Non-IID Data
 
 <p>
@@ -68,7 +68,7 @@ Typically, data distributed across Nodes is non-IID (non-independent and identic
 - **Concept Shift**: Local Nodes may have the same features but different labels.
 - **Unbalancedness**: The amount of data available at each local Node can vary in size.
 
-<a href="" name="-security">
+<a href="#-security" name="-security">
 ### 2.3 Security
 
 <p>
@@ -80,7 +80,7 @@ Security is a top priority in federated learning. With increasing attention to d
 
 The key idea of federated learning is to train models with local data and only exchange model parameter updates. This helps to protect data fully at the local Node, preventing data leakage while participating in collective learning with other Nodes [[1]](#-reference-1).
 
-<a href="" name="-types-of-federated-learning">
+<a href="#-types-of-federated-learning" name="-types-of-federated-learning">
 ## 3. Types of Federated Learning Based on Data Distribution Characteristics
 
 In federated learning, data often has diverse distributions and characteristics. To fit different tasks, there are types of federated learning based on data partitioning and characteristics [[1]](#-reference-1).
@@ -94,7 +94,7 @@ In federated learning, data often has diverse distributions and characteristics.
 - $$I$$ denotes the ID space
 - A dataset at a node looks like $$(I, X, Y)$$
 
-<a href="" name="-vertical-federated-learning">
+<a href="#-vertical-federated-learning" name="-vertical-federated-learning">
 ### 3.1 Vertical Federated Learning
 
 <p>
@@ -110,7 +110,7 @@ $$
 X_i \neq X_j, \quad Y_i \neq Y_j, \quad I_i = I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a href="" name="-horizontal-federated-learning">
+<a href="#-horizontal-federated-learning" name="-horizontal-federated-learning">
 ### 3.2 Horizontal Federated Learning
 
 <p>
@@ -124,7 +124,7 @@ $$
 X_i = X_j, \quad Y_i = Y_j, \quad I_i \neq I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a href="" name="-transfer-federated-learning">
+<a href="#-transfer-federated-learning" name="-transfer-federated-learning">
 ### 3.3 Transfer Federated Learning
 
 <p>
@@ -142,7 +142,7 @@ $$
 X_i \neq X_j, \quad Y_i \neq Y_j, \quad I_i \neq I_j, \quad \forall D_i, D_j, \, i \neq j
 $$
 
-<a href="" name="-federated-learning-algorithms">
+<a href="#-federated-learning-algorithms" name="-federated-learning-algorithms">
 ## 4. Federated Learning Algorithms
 
 Several algorithms have been developed to enhance the performance and efficiency of federated learning systems:
@@ -151,10 +151,10 @@ Several algorithms have been developed to enhance the performance and efficiency
 - **Federated Averaging (FedAvg)**: FedAvg combines local training using stochastic gradient descent with model averaging to improve performance and efficiency [[8]](#-reference-8).
 - **Federated Proximal (FedProx)**: FedProx introduces a proximal term to the objective function to handle heterogeneity among local models, improving convergence and robustness [[8]](#-reference-8).
 
-<a href="" name="-variants-of-federated-learning">
+<a href="#-variants-of-federated-learning" name="-variants-of-federated-learning">
 ## 5. Variants of Federated Learning
 
-<a href="" name="-fedsgd">
+<a href="#-fedsgd" name="-fedsgd">
 ### 5.1 FedSGD
 
 The basic optimization algorithm for Federated Learning is built on Stochastic Gradient Descent (SGD). Federated Learning with Stochastic Gradient Descent (FedSGD) computes gradients for each batch (where each batch represents each Node) during a Federated Learning round [[6]](#-reference-6).
@@ -167,7 +167,7 @@ $$
 
 This approach seems effective but requires a large number of rounds to train a good model [[7]](#-reference-7).
 
-<a href="" name="-fedavg">
+<a href="#-fedavg" name="-fedavg">
 ### 5.2 FedAvg
 
 The SGD-based approach (3) can also be implemented as follows: Nodes compute $$g_k$$ and update the local model as $$w_{t+1}^k \leftarrow w_t - \eta g_k$$, then send $$w_{t+1}^k$$ back to the Server. The Server then aggregates the new global model using the formula:
@@ -180,7 +180,7 @@ This implementation averages local models, so it is called Federated Averaging (
 
 The FedAvg implementation uses three main parameters: the ratio of Nodes selected per Federated Learning round ($$C$$), the number of local epochs ($$E$$), and the local batch size ($$B$$). Setting $$C = 1$$, $$B = \infty$$, $$E = 1$$ corresponds to SGD. For each Node with $$n_k$$ data, the number of updates per round is $$u_k = \frac{E \cdot n_k}{B}$$ [[6]](#-reference-6).
 
-<a href="" name="-fedprox">
+<a href="#-fedprox" name="-fedprox">
 ### 5.3 FedProx
 
 With the FedAvg algorithm, each Federated Learning round selects a fraction $$C$$ (0 < $$C$$ < 1) of Nodes to participate in the learning process. These Nodes optimize the local model using Gradient Descent, with a fixed parameter $$E$$ (local epoch), so the local model is trained $$E$$ times [[6]](#-reference-6). Since data across Nodes is not identical, some Nodes may converge earlier while others may not. Often, local models converge early and diverge from the convergence point of the global model [[8]](#-reference-8). To minimize this issue, a penalty parameter $$\mu$$ is used to control the discrepancy between $$w_t$$ and $$w_{t+1}^k$$. The penalty term is added to the local loss function as follows [[8]](#-reference-8):
