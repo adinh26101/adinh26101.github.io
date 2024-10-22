@@ -15,12 +15,12 @@ math: true
 - [3. Connect EC2 and set up the code + environment](#-setup-ec2-instance)
 - [4. Open port 8000 and access](#-finish)
 
-<a name="-introduction"></a>
+<a href="" name="-introduction"></a>
 ## 1. Introduction
 
 Annyeong haseyo, in this post, I’ll guide you on how to deploy a Django webapp (a love confession website) to EC2.  
 
-<a name="-create-ec2-instance"></a>
+<a href="" name="-create-ec2-instance"></a>
 ## 2. Create an EC2 instance
 
 To create an EC2 instance, follow these steps:
@@ -49,7 +49,7 @@ To create an EC2 instance, follow these steps:
 
 Now that the instance is created, let’s set it up.
 
-<a name="-setup-ec2-instance"></a>
+<a href="" name="-setup-ec2-instance"></a>
 ## 3. Connect EC2 and set up the code + environment
 
 1. Open the instance details and click on **Connect**.
@@ -109,7 +109,7 @@ Now, let’s clone the code and continue the setup:
     <em>Figure 7. Hosting success message.</em>
 </p>
 
-<a name="-finish"></a>
+<a href="" name="-finish"></a>
 ## 4. Open port 8000 and access
 
 Next, we’ll open port 8000 for the instance. Here’s how:
