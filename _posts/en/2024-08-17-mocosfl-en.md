@@ -21,17 +21,17 @@ math: true
 - [4. Experiments](#-experiments)
 - [5. References](#-references)
 
-<a href="" name="-introduction">
+<a href="#-introduction" name="-introduction">
 ## 1. Introduction
 
 In this paper, we will explore the MoCoSFL algorithm, a prominent paper published in the top 5% at ICLR 2023 [[3]](#-reference-3).
 
 Before diving into MoCoSFL (Momentum Contrastive Self-Supervised Learning), we will first review MoCo (Momentum Contrast) and SFL (Split Federated Learning) to gain a comprehensive understanding of MoCoSFL.
 
-<a href="" name="-foundation-algorithms">
+<a href="#-foundation-algorithms" name="-foundation-algorithms">
 ## 2. Foundation Algorithms
 
-<a href="" name="-moco">
+<a href="#-moco" name="-moco">
 ### 2.1 MoCo - Momentum Contrast
 
 <p>
@@ -127,7 +127,7 @@ This method has achieved good results in representation learning tasks, especial
 
 </details>
 
-<a href="" name="-sfl">
+<a href="#-sfl" name="-sfl">
 ### 2.2 SFL - Split-Federated Learning
 
 For a detailed overview of Federated Learning, please refer to my article on [Federated Learning](https://adinh26101.github.io/posts/hoc-may-lien-ket/).
@@ -209,12 +209,12 @@ To recap **federated learning**: There are 5 steps in the **federated learning**
 
 The SFL model combines the benefits of federated learning and split learning, optimizing computational resource use and ensuring data privacy by not sharing raw data between clients and the main server.
 
-<a href="" name="-deep-dive-into-the-paper">
+<a href="#-deep-dive-into-the-paper" name="-deep-dive-into-the-paper">
 ## 3. Deep Dive into the Paper
 
 [Poster of the paper](https://iclr.cc/virtual/2023/poster/12142)
 
-<a href="" name="-problem">
+<a href="#-problem" name="-problem">
 ### 3.1 Problem
 
 <p>
@@ -240,7 +240,7 @@ MoCoSFL is an innovative combination of SFL-V1 and MoCo-V2.
     <em>Figure 15. Vector concatenation.</em>
 </p>
 
-<a href="" name="-mocosfl">
+<a href="#-mocosfl" name="-mocosfl">
 ### 3.2 MoCoSFL
 
 <p>
@@ -294,7 +294,7 @@ MoCoSFL reduces model divergence compared to FL-SSL methods, as illustrated in c
 
 By reducing model divergence, MoCoSFL optimizes the distributed learning process and enhances model accuracy.
 
-<a href="" name="-taressfl">
+<a href="#-taressfl" name="-taressfl">
 ### 3.3 TAResSFL - Target-Aware ResSFL
 
 **MoCoSFL** has two main issues: high communication cost due to the transmission of **latent vectors** and vulnerability to **Model Inversion Attack (MIA)**, which threatens client data privacy.
@@ -337,7 +337,7 @@ In **ResSFL**, the server performs pretraining against **MIA** using data from m
 
 **Main Goal** of this scheme is to use target-domain data for pretraining the model, then freeze the client-side model weights during training to minimize communication costs and optimize federated learning.
 
-<a href="" name="-experiments">
+<a href="#-experiments" name="-experiments">
 ## 4. Experiments
 
 **Experiment Setup:**
@@ -377,17 +377,17 @@ Comparing hardware resource costs of **MoCoSFL**, **MoCoSFL+TAResSFL** (SyncFreq
     <em>Figure 25. Hardware demonstration.</em>
 </p>
 
-<a href="" name="-references">
+<a href="#-references" name="-references">
 ## 5. References
 
-<a href="" name="-reference-1"></a>
-<a href="" href="https://arxiv.org/abs/1911.05722" target="_blank">[1] **Momentum Contrast for Unsupervised Visual Representation Learning**, _Kaiming He et al._</a>
+<a href="#-reference-1" name="-reference-1"></a>
+<a href="https://arxiv.org/abs/1911.05722" target="_blank">[1] **Momentum Contrast for Unsupervised Visual Representation Learning**, _Kaiming He et al._</a>
 
-<a href="" name="-reference-2"></a>
-<a href="" href="https://arxiv.org/abs/2004.12088" target="_blank">[2] **SplitFed: When Federated Learning Meets Split Learning**, _Chandra Thap et al._</a>
+<a href="#-reference-2" name="-reference-2"></a>
+<a href="https://arxiv.org/abs/2004.12088" target="_blank">[2] **SplitFed: When Federated Learning Meets Split Learning**, _Chandra Thap et al._</a>
 
-<a href="" name="-reference-3"></a>
-<a href="" href="https://openreview.net/forum?id=2QGJXyMNoPz" target="_blank">[3] **MocoSFL: enabling cross-client collaborative self-supervised learning**, _Jingtao Li et al._</a>
+<a href="#-reference-3" name="-reference-3"></a>
+<a href="https://openreview.net/forum?id=2QGJXyMNoPz" target="_blank">[3] **MocoSFL: enabling cross-client collaborative self-supervised learning**, _Jingtao Li et al._</a>
 
-<a href="" name="-reference-4"></a>
-<a href="" href="https://arxiv.org/abs/2205.04007" target="_blank">[4] **ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**, _Jingtao Li et al._</a>
+<a href="#-reference-4" name="-reference-4"></a>
+<a href="https://arxiv.org/abs/2205.04007" target="_blank">[4] **ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**, _Jingtao Li et al._</a>

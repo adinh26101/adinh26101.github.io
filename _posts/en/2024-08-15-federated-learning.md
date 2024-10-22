@@ -189,28 +189,28 @@ $$
 h(w; w_0) = F(w) + \frac{\mu}{2} \|w - w_0\|^2 \quad (5)
 $$
 
-<a href="" name="-references">
+<a href="#-references" name="-references">
 ## 6. References
-<a href="" name="-reference-1"></a>
-<a href="" href="https://doi.org/10.48550/arXiv.2007.07224" target="_blank">[1] **Federated Machine Learning: Concept and Applications**, _Qiang Yang et al._</a>
+<a href="#-reference-1" name="-reference-1"></a>
+<a href="https://doi.org/10.48550/arXiv.2007.07224" target="_blank">[1] **Federated Machine Learning: Concept and Applications**, _Qiang Yang et al._</a>
 
-<a href="" name="-reference-2"></a>
-<a href="" href="https://en.wikipedia.org/wiki/Federated_learning" target="_blank">[2] **Federated Learning**, _Wikipedia_</a>
+<a href="#-reference-2" name="-reference-2"></a>
+<a href="https://en.wikipedia.org/wiki/Federated_learning" target="_blank">[2] **Federated Learning**, _Wikipedia_</a>
 
-<a href="" name="-reference-3"></a>
-<a href="" href="https://arxiv.org/abs/1912.04977" target="_blank">[3] **Advances and Open Problems in Federated Learning**, _Peter Kairouz et al._</a>
+<a href="#-reference-3" name="-reference-3"></a>
+<a href="https://arxiv.org/abs/1912.04977" target="_blank">[3] **Advances and Open Problems in Federated Learning**, _Peter Kairouz et al._</a>
 
-<a href="" name="-reference-4"></a>
-<a href="" href="https://arxiv.org/abs/1902.01046" target="_blank">[4] **Towards Federated Learning at Scale: System Design**, _Keith Bonawitz et al._</a>
+<a href="#-reference-4" name="-reference-4"></a>
+<a href="https://arxiv.org/abs/1902.01046" target="_blank">[4] **Towards Federated Learning at Scale: System Design**, _Keith Bonawitz et al._</a>
 
-<a href="" name="-reference-5"></a>
-<a href="" href="https://link.springer.com/chapter/10.1007/978-3-540-79228-4_1" target="_blank">[5] **Differential Privacy: A Survey of Results**, _Cynthia Dwork_</a>
+<a href="#-reference-5" name="-reference-5"></a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-540-79228-4_1" target="_blank">[5] **Differential Privacy: A Survey of Results**, _Cynthia Dwork_</a>
 
-<a href="" name="-reference-6"></a>
-<a href="" href="https://arxiv.org/abs/1602.05629" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
+<a href="#-reference-6" name="-reference-6"></a>
+<a href="https://arxiv.org/abs/1602.05629" target="_blank">[6] **Communication-Efficient Learning of Deep Networks from Decentralized Data**, _H. Brendan McMahan et al._</a>
 
-<a href="" name="-reference-7"></a>
-<a href="" href="https://arxiv.org/abs/1502.03167" target="_blank">[7] **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**, _Sergey Ioffe, Christian Szegedy_</a>
+<a href="#-reference-7" name="-reference-7"></a>
+<a href="https://arxiv.org/abs/1502.03167" target="_blank">[7] **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**, _Sergey Ioffe, Christian Szegedy_</a>
 
-<a href="" name="-reference-8"></a>
-<a href="" href="https://arxiv.org/abs/1812.06127" target="_blank">[8] **Federated Optimization in Heterogeneous Networks**, _T. Li et al._</a>
+<a href="#-reference-8" name="-reference-8"></a>
+<a href="https://arxiv.org/abs/1812.06127" target="_blank">[8] **Federated Optimization in Heterogeneous Networks**, _T. Li et al._</a>
