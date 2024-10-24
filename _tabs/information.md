@@ -11,7 +11,7 @@ order: 5
 
 📍 **Chungbuk University**  
 ✉️ [a.dinh26101@gmail.com](mailto:a.dinh26101@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/anhdinh)  
+🔗 [LinkedIn](https://www.linkedin.com/in/adinh26101)  
 
 ---
 
