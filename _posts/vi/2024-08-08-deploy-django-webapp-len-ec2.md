@@ -1,7 +1,7 @@
 ---
 title: "Deploy Django webapp lên EC2"
 date: 2024-08-08 10:00:00 +0000
-categories: [Webapp]
+categories: [Webapp, Django, AWS]
 tags: [Django, EC2, AWS]
 author: adinh26101
 layout: post
