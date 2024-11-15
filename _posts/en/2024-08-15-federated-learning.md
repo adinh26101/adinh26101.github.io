@@ -7,6 +7,7 @@ author: adinh26101
 icon: fas fa-robot
 lang: en
 math: true
+permalink: /en/federated-learning/
 ---
 ### Contents
 - [1. Introduction](#-introduction)

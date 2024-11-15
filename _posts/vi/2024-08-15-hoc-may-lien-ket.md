@@ -7,6 +7,7 @@ author: adinh26101
 icon: fas fa-robot
 lang: vi
 math: true
+permalink: /vi/hoc-may-lien-ket/
 ---
 ### Nội dung
 - [1. Giới thiệu](#-gioi-thieu)
