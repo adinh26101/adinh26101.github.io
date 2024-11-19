@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 7.0", ">= 7.0.1"
+gem 'jekyll-polyglot', git: 'https://github.com/hionpu/polyglot', branch: 'master'
 
 group :test do
   gem "html-proofer", "~> 5.0"

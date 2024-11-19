@@ -1,13 +1,13 @@
 ---
 title: "Học Máy Liên Kết: Tổng Quan"
-date: 2024-08-15-federated-learning 10:00:00 +0000
+date: 2024-08-15 10:00:00 +0000
 categories: [Machine Learning, AI]
 tags: [Federated Learning, AI, Machine Learning]
 author: adinh26101
 icon: fas fa-robot
 lang: vi
 math: true
-permalink: /vi/hoc-may-lien-ket/
+permalink: /posts/federated-learning/
 ---
 ### Nội dung
 - [1. Giới thiệu](#-gioi-thieu)
