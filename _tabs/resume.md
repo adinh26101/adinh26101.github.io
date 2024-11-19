@@ -1,6 +1,6 @@
 ---
-layout: information
+layout: resume
 icon: fa-solid fa-address-card
-order: -1
+order: -2
 sidebar: false
 ---
