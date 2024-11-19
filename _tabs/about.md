@@ -14,7 +14,7 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
 - **Sports:** Soccer, badminton, volleyball,..
 - **Games:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
 - **Travel**: 🧳🚅🌎
-- **Reading**:
+- **Reading**: Không tức giận bạn đã thắng,..
 <style>
     #customize-list{
         float:left;

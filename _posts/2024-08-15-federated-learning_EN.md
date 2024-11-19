@@ -1,13 +1,13 @@
 ---
 title: "Federated Learning: An Overview"
-date: 2024-08-15-federated-learning 10:00:00 +0000
+date: 2024-08-15 10:00:00 +0000
 categories: [Machine Learning, AI]
 tags: [Federated Learning, AI, Machine Learning]
 author: adinh26101
 icon: fas fa-robot
 lang: en
 math: true
-permalink: /en/federated-learning/
+permalink: /posts/federated-learning/
 ---
 ### Contents
 - [1. Introduction](#-introduction)

@@ -8,7 +8,7 @@ layout: post
 icon: fas fa-robot
 lang: vi
 math: true
-permalink: /vi/deploy-django-webapp-len-ec2/
+permalink: /posts/deploy-django-webapp-to-ec2/
 ---
 ### Nội dung
 - [1. Giới thiệu](#-gioi-thieu)
