@@ -54,5 +54,5 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
         <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
     </div>
 <div id="gr_updates_widget">
-    <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?num_updates=100&user=183608996&width=600&height=900" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?num_updates=100&user=183608996&height=900" width="100%" height="100%" frameborder="0"></iframe>
 </div>
