@@ -1,0 +1,35 @@
+# The contact options.
+
+- type: github
+  icon: "fab fa-github"
+  url: "https://github.com/adinh26101"
+
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/adinh26101"
+
+- type: upwork
+  icon: "fa-brands fa-upwork"
+  url: "https://www.upwork.com/freelancers/~0113bb39b28be87d7a"
+
+- type: facebook
+  icon: "fab fa-facebook"
+  url: "https://www.facebook.com/adinh26101"
+
+- type: youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/@adinh26101"
+
+- type: tiktok
+  icon: "fab fa-tiktok"
+  url: "https://www.tiktok.com/@adinh26101"
+
+- type: email
+  icon: "fas fa-envelope"
+  url: "mailto:a.dinh26101@gmail.com"
+  noblank: true
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   url: "/feed.xml"
+#   noblank: true
