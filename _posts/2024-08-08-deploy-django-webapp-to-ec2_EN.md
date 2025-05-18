@@ -8,7 +8,7 @@ layout: post
 icon: fas fa-robot
 lang: en
 math: true
-permalink: /en/posts/deploy-django-webapp-to-ec2/
+permalink: /posts/deploy-django-webapp-to-ec2/
 ---
 ### Contents
 - [1. Introduction](#-introduction)
