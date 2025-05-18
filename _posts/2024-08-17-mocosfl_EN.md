@@ -8,7 +8,7 @@ layout: post
 icon: fas fa-robot
 lang: en
 math: true
-permalink: /posts/mocosfl/
+permalink: /en/posts/mocosfl/
 ---
 ### Contents
 - [1. Introduction](#-introduction)

@@ -7,8 +7,6 @@ order: 4
 
 _I am a Gen Z international student currently studying in South Korea. I am passionate about learning new technologies, sharing experiences, and personal development._
 
-[View My Digital Business Card](/information/)
-
 ## Hobbies
 
 - **Music:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,..
