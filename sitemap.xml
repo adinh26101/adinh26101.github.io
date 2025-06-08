@@ -5,8 +5,13 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {% for lang in site.languages %}
-  {% assign lang_prefix = lang == site.default_lang | default: 'en' ? '' : '/' | append: lang %}
-  
+  {% assign current_lang = lang | default: 'en' %}
+  {% if current_lang == site.default_lang %}
+    {% assign lang_prefix = '' %}
+  {% else %}
+    {% assign lang_prefix = '/' | append: current_lang %}
+  {% endif %}
+
   {% for page in site.pages %}
     {% assign url = lang_prefix | append: page.url %}
     {% unless site.exclude_from_localization contains page.path or url contains '/assets/' %}

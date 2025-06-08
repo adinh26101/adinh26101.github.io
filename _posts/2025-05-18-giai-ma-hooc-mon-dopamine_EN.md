@@ -18,6 +18,11 @@ permalink: /posts/giai-ma-hooc-mon-dopamine/
 <a href="#-introduction" name="-introduction"></a>
 ## 1. Introduction
 
+<p>
+    <img src="assets/2025-05-18-dopamine-nation/book-cover.png" alt="dopamine-nation"/>
+    <em>Book cover (Source: tiki)</em>
+</p>
+
 <a href="#-chapter-overview" name="-chapter-overview"></a>
 ## 2. Chapter overview
 
