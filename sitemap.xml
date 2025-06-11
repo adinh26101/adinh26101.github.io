@@ -4,35 +4,40 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% for lang in site.languages %}
-  {% assign current_lang = lang | default: 'en' %}
-  {% if current_lang == site.default_lang %}
-    {% assign lang_prefix = '' %}
-  {% else %}
-    {% assign lang_prefix = '/' | append: current_lang %}
-  {% endif %}
+{%- for lang in site.languages -%}
+  {%- assign current_lang = lang | default: 'en' -%}
+  {%- if current_lang == site.default_lang -%}
+    {%- assign lang_prefix = '' -%}
+  {%- else -%}
+    {%- assign lang_prefix = '/' | append: current_lang -%}
+  {%- endif -%}
 
-  {% for page in site.pages %}
-    {% assign url = lang_prefix | append: page.url %}
-    {% unless site.exclude_from_localization contains page.path or url contains '/assets/' %}
-      {% if page.layout %}
-        <url>
-          <loc>{{ url | absolute_url }}</loc>
-        </url>
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
+  {%- for collection in site.collections -%}
+    {%- assign items = site[collection.label] -%}
+    {%- for item in items -%}
+      {%- assign url = lang_prefix | append: item.url -%}
+      {%- unless url contains '/assets/' -%}
+<url>
+  <loc>{{ url | absolute_url }}</loc>
+  {%- if item.last_modified_at -%}
+  <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+  {%- elsif item.date -%}
+  <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+  {%- endif -%}
+</url>
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endfor -%}
 
-  {% for collection in site.collections %}
-    {% assign items = site[collection.label] %}
-    {% for item in items %}
-      {% assign url = lang_prefix | append: item.url %}
-      {% unless url contains '/assets/' %}
-        <url>
-          <loc>{{ url | absolute_url }}</loc>
-        </url>
-      {% endunless %}
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
+{%- for page in site.pages -%}
+  {%- assign url = lang_prefix | append: page.url -%}
+  {%- unless site.exclude_from_localization contains page.path or url contains '/assets/' -%}
+    {%- if page.layout -%}
+<url>
+  <loc>{{ url | absolute_url }}</loc>
+</url>
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
 </urlset>
