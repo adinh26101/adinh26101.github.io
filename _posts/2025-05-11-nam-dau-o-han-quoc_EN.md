@@ -25,7 +25,7 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 allowfullscreen></iframe>
 
-*Video: One Year in Cheongju*
+Video: One Year in Cheongju – Second Prize in the UCC Contest for Raising Awareness of Foreign Residents in Cheongju (청주시 외국인주민 인식개선 콘텐츠 공모전)
 
 ---
 
@@ -36,7 +36,7 @@ title="Pohang Check-in" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 allowfullscreen></iframe>
 
-Video: One Year in Cheongju – Second Prize in the UCC Contest for Raising Awareness of Foreign Residents in Cheongju (청주시 외국인주민 인식개선 콘텐츠 공모전)
+Video:  Check-in Pohang - Locations from the drama 'The Sea Village Cha-Cha-Cha'
 
 ---
 
