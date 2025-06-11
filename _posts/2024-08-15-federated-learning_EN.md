@@ -8,7 +8,6 @@ icon: fas fa-robot
 lang: en
 math: true
 permalink: /posts/federated-learning/
-pin: true
 ---
 ### Contents
 - [1. Introduction](#-introduction)

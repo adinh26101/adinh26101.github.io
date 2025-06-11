@@ -8,7 +8,6 @@ icon: fas fa-robot
 lang: vi
 math: true
 permalink: /posts/federated-learning/
-pin: true
 ---
 ### Nội dung
 - [1. Giới thiệu](#-gioi-thieu)
