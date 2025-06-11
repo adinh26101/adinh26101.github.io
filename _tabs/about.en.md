@@ -2,18 +2,19 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
-lang: vi
+lang: en
+permalink: /about/
 ---
-_Tôi là một sinh viên quốc tế thuộc thế hệ Gen Z hiện đang học tại Hàn Quốc. Tôi đam mê học công nghệ mới, chia sẻ trải nghiệm và phát triển bản thân._
+_I am a Gen Z international student currently studying in South Korea. I am passionate about learning new technologies, sharing experiences, and personal development._
 
-## Sở thích
+## Hobbies
 
-- **Âm nhạc:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,...
-- **Phim ảnh:** Hoạt hình, Cartoon, Hành động,...
-- **Thể thao:** Bóng đá, cầu lông, bóng chuyền,...
-- **Trò chơi:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
-- **Du lịch:** 🧳🚅🌎
-- **Đọc sách:** Không tức giận bạn đã thắng,...
+- **Music:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,..
+- **Movies:** Animation, Cartoon, Action,..
+- **Sports:** Soccer, badminton, volleyball,..
+- **Games:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
+- **Travel**: 🧳🚅🌎
+- **Reading**: Không tức giận bạn đã thắng,..
 
 <style>
     #customize-list{
