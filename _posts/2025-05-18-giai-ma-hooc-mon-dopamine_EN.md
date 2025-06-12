@@ -13,12 +13,6 @@ image:
   path: assets/2025-05-18-dopamine-nation/book-cover.png
   alt: "Book cover (Source: tiki)"
 ---
-
-<p>
-    <img src="assets/2025-05-18-dopamine-nation/book-cover.png" alt="Book cover (Source: tiki)"/>
-    <em>Book cover (Source: tiki)</em>
-</p>
-
 # Overview of the Content
 
 ## 1. Dopamine – The Happiness Hormone and Balance  

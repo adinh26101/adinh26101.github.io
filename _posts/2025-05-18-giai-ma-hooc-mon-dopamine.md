@@ -15,12 +15,6 @@ image:
   alt: "Bìa sách (Nguồn: tiki)"
 ---
 <a href="#-gioi-thieu" name="-gioi-thieu"></a>
-
-<p>
-    <img src="assets/2025-05-18-dopamine-nation/book-cover.png" alt="Bìa sách (Nguồn: tiki)"/>
-    <em>Bìa sách (Nguồn: tiki)</em>
-</p>
-
 # Tổng quan về nội dung
 ## 1. Dopamine – hormone hạnh phúc và cân bằng
 <p>Dopamine là một chất dẫn truyền thần kinh quan trọng trong não – như những “tin nhắn hoá học” giúp các tế bào thần kinh giao tiếp hiệu quả. Nó giữ vai trò thiết yếu trong việc tạo ra cảm giác vui vẻ, hứng thú và động lực sống. Khi dopamine ở mức cân bằng, ta cảm thấy tỉnh táo, có mục tiêu và dễ tận hưởng cuộc sống. Nhưng nếu thiếu hụt, cơ thể trở nên chậm chạp, cứng đờ – đây là nguyên nhân chính của bệnh Parkinson. Ngược lại, khi dư thừa dopamine, não sẽ rơi vào trạng thái hưng phấn bất thường, dễ dẫn đến hành vi nghiện và mất kiểm soát cảm xúc. Dopamine vừa là “chìa khóa niềm vui”, vừa là con dao hai lưỡi nếu ta không hiểu và làm chủ nó.</p>
