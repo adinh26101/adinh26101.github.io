@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 lang: vi
 ---
-_Tôi là một sinh viên quốc tế thuộc thế hệ Gen Z hiện đang học tại Hàn Quốc. Tôi đam mê học công nghệ mới, chia sẻ trải nghiệm và phát triển bản thân._
+_Hello, Mình là Tuấn Anh kkkk._
 
 ## Sở thích
 
