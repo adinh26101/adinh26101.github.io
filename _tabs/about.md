@@ -13,46 +13,60 @@ _Tôi là một sinh viên quốc tế thuộc thế hệ Gen Z hiện đang h�
 - **Thể thao:** Bóng đá, cầu lông, bóng chuyền,...
 - **Trò chơi:** League of Legends, FIFA Online 4, Clash of Clans, PUBG, Valorant, Age of Empires (AoE),...
 - **Du lịch:** 🧳🚅🌎
-- **Đọc sách:** Không tức giận bạn đã thắng,...
 
-<style>
-    #customize-list{
-        float:left;
-        margin-left:20px;
-        list-style:none;
+
+<div>
+  <style>
+    .gr_custom_header_1755141133 {
+        border-bottom: 0.5px solid gray; /* giảm border */
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 150%;
+        font-weight: bold;
+        line-height: 1.5;
     }
-    #gr_updates_widget{
-        float:left;
-        border-radius: 5px;
-        background-color:#fff;
-        border:solid #683205 2px;
-        -webkit-box-shadow: 0px 0px 4px 1px #595959,
-        inset 0px 0px 0px 1px #7D730B;
-        -moz-box-shadow: 0px 0px 4px 1px #595959,
-        inset 0px 0px 0px 1px #7D730B;
-        box-shadow: 0px 0px 4px 1px #595959,
-        inset 0px 0px 0px 1px #7D730B;
-        padding:15px 0 0px 15px;
-        width:100%;
-        height:600px;
+    .gr_custom_header_1755141133 {
+      border-bottom: 1px solid gray;
+      margin-bottom: 5px;
+      text-align: center;
+      font-size: 150%;
     }
-    #gr_updates_widget p{
-        padding:0px;
-        margin:0;
-        font-size:14px;
+    .gr_custom_each_container_1755141133 {
+      margin-bottom: 10px;
+      overflow: auto;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #aaa;
     }
-    #gr_footer{
-		margin-bottom:0px;
-		height:30px;
+    .gr_custom_book_container_1755141133 {
+      float: left;
+      margin-right: 4px;
+      width: 39px;
+      height: 60px;
+      overflow: hidden;
     }
-    #gr_footer img{
-        width:100px;
-        float:left;
+    .gr_custom_author_1755141133,
+    .gr_custom_tags_1755141133 {
+      font-size: 10px;
     }
-</style>
-<div id="gr_footer">
-        <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
-    </div>
-<div id="gr_updates_widget">
-    <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?num_updates=100&user=183608996&height=900" width="100%" height="100%" frameborder="0"></iframe>
+    .gr_custom_tags_1755141133 {
+      color: gray;
+    }
+    .gr_custom_rating_1755141133 {
+      float: right;
+    }
+  </style>
+
+  <div id="gr_custom_widget_1755141133"></div>
+
+  <script src="https://www.goodreads.com/review/custom_widget/183608996.Dinh's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=100&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_border_width=1&widget_id=1755141133&widget_text_color=000000&widget_title_size=large&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('.gr_custom_header_1755141133');
+    if(header){
+      header.textContent = "Books Anh Dinh Has Read"; // sửa text ở đây
+    }
+  });
+</script>
 </div>
+
