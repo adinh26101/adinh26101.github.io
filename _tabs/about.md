@@ -6,7 +6,7 @@ lang: vi
 ---
 _Hello, Mình là Tuấn Anh kkkk._
 
-## Sở thích
+<!-- ## Sở thích
 
 - **Âm nhạc:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,...
 - **Phim ảnh:** Hoạt hình, Cartoon, Hành động,...
@@ -69,4 +69,4 @@ _Hello, Mình là Tuấn Anh kkkk._
   });
 </script>
 </div>
-
+ -->
