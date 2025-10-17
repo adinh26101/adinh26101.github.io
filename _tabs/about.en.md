@@ -7,7 +7,7 @@ permalink: /about/
 ---
 _I am a Gen Z international student currently studying in South Korea. I am passionate about learning new technologies, sharing experiences, and personal development._
 
-## Hobbies
+<!-- ## Hobbies
 
 - **Music:** Progressive House, Instrumental, Ballad, EDM, NSC, V-pop, K-pop, US-UK,..
 - **Movies:** Animation, Cartoon, Action,..
@@ -56,4 +56,4 @@ _I am a Gen Z international student currently studying in South Korea. I am pass
     </div>
 <div id="gr_updates_widget">
     <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?num_updates=100&user=183608996&height=900" width="100%" height="100%" frameborder="0"></iframe>
-</div>
+</div> -->
