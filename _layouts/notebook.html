@@ -2,45 +2,40 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  
-  <!-- Post Title -->
   <title>{{ page.title }} | adinh26101</title>
   <base href="https://adinh26101.github.io/">
-  
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+
+  <!-- Favicon & Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
   <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="adinh26101">
-  <meta name="application-name" content="adinh26101">
-  <meta name="theme-color" content="#ffffff">
-  
-  <!-- Font handwriting -->
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta name="apple-mobile-web-app-title" content="Notebook">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <!-- CSS -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Patrick+Hand&display=swap" rel="stylesheet">
+
   <style>
-  * { box-sizing: border-box; }
-  ::-moz-selection { background: #C2C2C0; }
+  * { box-sizing: border-box; margin:0; padding:0; }
   ::selection { background: #C2C2C0; }
 
-  body { margin:0; min-height:100vh; background:#fff; }
+  body {
+    min-height: 100vh;
+    background: #f8f4e6; /* giả giấy */
+    font-family: 'Patrick Hand', cursive;
+  }
 
   main {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 22px;
-    line-height: 2.2;
-    letter-spacing: 0.5px;
-    padding: 40px 30px;
     max-width: 900px;
-    margin: 50px auto 10px auto; /* trên 50px, dưới 10px */
-    background: #fffdf5; /* màu giấy */
+    margin: 40px auto;
+    padding: 40px 30px;
+    background: #fffdf5;
     border: 2px solid #f0e8e0;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    font-size: 22px;
+    letter-spacing: 0.5px;
   }
 
   h1 {
@@ -53,40 +48,101 @@
   }
 
   @keyframes fadeInDown {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  img { width: 100%; max-width: 600px; display: block; margin: 20px auto; }
-
-  .notebook-footer { text-align: right; font-style: italic; margin-top: 40px; }
+  img { width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; }
 
   /* Rough Notation */
+  .highlight, .underline, .box, .circle, .cross {
+    display: inline-block;
+    line-height: 1.4em;
+    padding: 0 2px;
+  }
   .highlight { background-color: #66d7ee; }
   .underline { text-decoration: underline red; }
   .box { border: 2px solid #66d7ee; padding: 2px; }
   .circle { border-radius: 50%; border: 2px solid red; padding: 2px; }
-  .cross { text-decoration: line-through red; }
-  </style>
+  .cross { position: relative; }
+  .cross::after {
+    content:"";
+    position: absolute;
+    top:50%;
+    left:0;
+    width:0;
+    height:2px;
+    background:red;
+    transform: translateY(-50%);
+    animation: crossLine 1.5s cubic-bezier(0.4,0,0.2,1) forwards;
+  }
+  @keyframes crossLine { 0%{width:0;}50%{width:50%;}100%{width:80%;} }
 
-  <style>
-  #footer {
-    text-align: center;
-    padding: 20px 0;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 18px;
-    color: #555;
+  /* Notebook Footer */
+  .notebook-footer { text-align:right; font-style:italic; margin-top:25px; color:#444; width: fit-content; }
+  .note-date { font-size:20px; opacity:0.85; transform:rotate(-0.8deg); }
+
+  .signature-wrapper { text-align:center; display:block; margin-top:10px; position:relative; }
+
+  .signature {
+    font-family: 'Ephesis', cursive;
+    font-size: 28px;
+    color:#444;
+    letter-spacing:1px;
+    transform: rotate(1.5deg);
+    position: relative;
   }
 
-  #footer a {
-    color: #66d7ee;
-    text-decoration: none;
+  .signature-animate {
+    opacity: 0;
+    transform: rotate(1.5deg) translateY(30px);
+    transition: opacity 2s ease, transform 2s ease;
   }
 
-  #footer a:hover {
-    text-decoration: underline;
+  .signature-animate.visible {
+    opacity: 1;
+    transform: rotate(1.5deg) translateY(0);
+    transition: opacity 2s ease 0.5s, transform 2s ease 0.5s; /* delay chữ ký */
+  }
+
+  .signature::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-5px;
+    height:2px;
+    background: linear-gradient(90deg, transparent 0%, #222 30%, #222 70%, transparent 100%);
+    border-radius:50%;
+    transform: scaleX(0);
+    transform-origin:left;
+  }
+
+  .signature.visible::after {
+    animation: drawUnderline 2s ease forwards 2.5s; /* chạy sau chữ ký */
+  }
+
+  ul, ol {
+    padding-left: 1.5em; /* khoảng indent cho list */
+    margin-bottom: 1em;  /* khoảng cách giữa các list */
+  }
+
+  li {
+    margin-bottom: 0.5em; /* cách mỗi item */
+  }
+
+  @keyframes drawUnderline { to { transform: scaleX(1); } }
+
+  .signature-link { text-align:center; display:block; font-size:18px; color:#66d7ee; text-decoration:none; margin-top:5px; }
+  .signature-link:hover { text-decoration:underline; }
+
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    main { padding: 20px 15px; font-size: 18px; margin:20px 10px; }
+    h1 { font-size:1.8rem; }
+    .signature { font-size:24px; }
+    .note-date { font-size:16px; }
+    .signature-link { font-size:16px; }
+    ul, ol { padding-left: 1.2em; }
   }
   </style>
 </head>
@@ -98,32 +154,47 @@
   <div class="notebook-content">
     {{ content }}
   </div>
-
-  <div class="notebook-footer">
-    <p>{{ page.note_location }}, ngày {{ page.note_date }}</p>
-    <p>{{ page.signature }}</p>
+  <div style="justify-items: right;">
+    <div class="notebook-footer">
+      <p class="note-date">{{ page.note_location }}, ngày {{ page.note_date }}</p>
+      <div class="signature-wrapper">
+        <p class="signature signature-animate">{{ page.signature }}</p>
+        <a class="signature-link" href="/notebooks">adinh26101.github.io</a>
+      </div>
+    </div>
   </div>
 </main>
-
-<footer id="footer">
-  <a href="/notebooks">adinh26101.github.io</a>
-</footer>
 
 <!-- Rough Notation JS -->
 <script type="module">
 import { annotate } from "https://unpkg.com/rough-notation?module";
 
-document.querySelectorAll('.highlight, .underline, .box, .circle, .cross').forEach(el => {
-  let typeMap = {
-    'highlight': 'highlight',
-    'underline': 'underline',
-    'box': 'box',
-    'circle': 'circle',
-    'cross': 'crossed-off'
-  };
-  let type = Object.keys(typeMap).find(k => el.classList.contains(k));
-  annotate(el, { type: typeMap[type], color: (type==='highlight' || type==='box') ? '#66d7ee' : 'red' }).show();
+function applyAnnotations() {
+  document.querySelectorAll('.highlight, .underline, .box, .circle, .cross').forEach(el=>{
+    let typeMap={highlight:'highlight', underline:'underline', box:'box', circle:'circle', cross:'crossed-off'};
+    let type = Object.keys(typeMap).find(k => el.classList.contains(k));
+    annotate(el,{type:typeMap[type], color:(type==='highlight'||type==='box')?'#66d7ee':'red', multiline:true, padding:2}).show();
+  });
+}
+
+window.addEventListener('load', applyAnnotations);
+window.addEventListener('resize', ()=>{
+  document.querySelectorAll('svg[data-rough-annotation]').forEach(e=>e.remove());
+  applyAnnotations();
 });
+
+// Intersection Observer chữ ký
+const signature = document.querySelector('.signature-animate');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      entry.target.classList.add('visible'); // gạch ngang chạy cùng
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.5});
+observer.observe(signature);
 </script>
 </body>
 </html>
