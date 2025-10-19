@@ -14,7 +14,7 @@ signature: "Anhz"
 <p align="center"><em><span class="highlight">"Bạn sẽ không bao giờ có thể thoát ra khỏi trái tim mình."</span> Vì vậy, tốt hơn hết bạn nên lắng nghe những gì nó nói.</em></p>
 <p><small>Nhiều khi mình phải đối mặt với bản thân mình mà quên mất mình cũng phải tôn trọng cảm xúc, mong muốn thật sự của mình.</small></p>
 
-<p align="center"><em><span class="circle">"Bạn phải luôn biết bạn muốn gì."</span></em></p>
+<p align="center"><em><span class="underline">"Bạn phải luôn biết bạn muốn gì."</span></em></p>
 <p><small>Phải xác định rõ mục tiêu, điều mình hướng đến để không bị lạc đường.</small></p>
 
 <p align="center"><em><span class="highlight">"Bạn tin mình là gì, thì bạn chính là như vậy."</span></em></p>
@@ -32,7 +32,7 @@ signature: "Anhz"
 <p align="center"><em><span class="highlight">"Hãy nhớ rằng, trái tim của bạn ở đâu, thì tại nơi đó bạn sẽ tìm thấy kho báu của đời mình."</span></em></p>
 <p><small>Khi ta yêu thích điều gì đó, ở đó luôn có niềm vui và ý nghĩa dành cho mình hì hì.</small></p>
 
-<p align="center"><em><span class="circle">"Chỉ có một điều khiến ước mơ không thể đạt được, đó là nỗi sợ thất bại."</span></em></p>
+<p align="center"><em><span class="underline">"Chỉ có một điều khiến ước mơ không thể đạt được, đó là nỗi sợ thất bại."</span></em></p>
 <p><small>Mình thường tự nhủ: “Ừ, cứ làm đi, thất bại thì thôi” còn hơn là không làm gì cả. Nhờ vậy không còn sợ thất bại khi bắt tay vào làm.</small></p>
 
 <p align="center"><em>"Vào bất kỳ thời điểm nào trong cuộc đời, mỗi người đều có khả năng thực hiện những gì họ mơ ước."</em></p>
