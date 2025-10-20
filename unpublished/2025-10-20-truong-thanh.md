@@ -1,0 +1,14 @@
+---
+layout: notebook
+title: "Trưởng thành bên ngoài, đứa trẻ bên trong"
+note_location: "Linh tinh"
+note_date: "20/10/2025"
+signature: "Anhz"
+---
+
+<div class="notebook-content">
+<p>Mình nghe nói ai cũng có trong mình một đứa, cái ẩn dụ này ngẫm thì cũng khá hay. Mĩnh thấy đứa trẻ mà mọi người gọi ấy có thể là chân ngã hay đơn giản hơn là cái <p class="highlight">tôi thật</p> của tụi mình. Ở đó mình biết mình muốn gì, mình là ai, mà không bị ràng buộc bởi xã hội, đạo đức hay định kiến nào cả. Đứa trẻ ấy hồn nhiên, tò mò và chính là người bạn thân nhất dẫn mình qua đời sống mỗi ngày.</p>
+
+<p>Mình thấy quá trình trưởng thành khá phức tạp và bao gồm nhiều cái khó mô tả, mình thường gán nó vào khái niệm <p class="highlight">bản ngã</p> để dễ đề cập mỗi khi suy nghĩ cái khúc nào liên quan tới miếng này kkk. Nó là cái tôi mà mình muốn người khác nhìn thấy, hay còn gọi là cái tôi xã hội. Mình ngẫm thấy cái tôi này càng phát triển theo thời gian và nhận thức, càng ý thức được, thì “lớp áo” này càng dày. Nói về cái tôi này mình nghĩ thôi cũng thấy mệt, đại khái nó là cái tôi của trách nhiệm và tất nhiên nó rất cần thiết kkk. Nói sâu hơn thì rối rắm lắm đúng chỗ này lại chưa đúng chỗ kia, cái này đúng mà cũng chưa đủ đúng. Thi thoảng mình liên tưởng cái tôi này là cái "tôi học" tại vì phải học nhiều thứ. Chả hạn mới ở đây mình học được cái này đúng thì đi chỗ khác có thể nó bớt đúng đi rồi phải học cái đúng khác, nó phức tạp chỗ đó đó kkkk</p>
+
+<p>Có lúc chân ngã định hình bản ngã, có lúc bản ngã giúp chân ngã hiểu rõ bản thân hơn, và cũng có lúc hai thứ này va chạm nhau. Khi mà nó mâu thuẫn thì nội tâm mình thường xung đột và nhiều khi cần thời gian tĩnh lặng để suy ngẫm, nghe mà thấy phức tạp nhỉ kkk. Nói thêm về cái này thì loạn lắm với cả trải nghiệm của mình cũng chỉ đến đấy, mình nói về cách mình giữ mình vui vẻ đi. Mình thích chơi với các bạn nhỏ, mình nhận ra điều này khi mình có dịp đi thiện nguyện, đi dạy và chơi với các bạn. Cảm nhận được cái năng lượng vô tư khi chơi với các bạn giúp mình không cần suy nghĩ nhiều. Ngẫm và quan sát thấy quanh mình cũng có những người lớn vô tư và vui vẻ như thế, có lẽ đó chính là sự hồn nhiên kkkk (mình đoán thế). Thế là mình nghĩ, thay vì khi bé mình hồn nhiên tò mò thì giờ mình hồn nhiên và bớt tò mò thì cũng có thể thảnh thơi mà nhỉ. Và đó là cách mình giữ mình vui vẻ kkkk</p>

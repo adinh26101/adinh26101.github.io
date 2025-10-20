@@ -4,7 +4,7 @@ title: "Notebooks"
 refactor: true
 ---
 
-<h1>Linh Tinh Diary</h1>
+<h1>Linh Tinh Diary | Một mớ câu hỏi vì sao</h1>
 
 {% assign sorted_notes = site.notebooks | sort: 'date' | reverse %}
 {% assign notes_by_year = sorted_notes | group_by_exp:"note", "note.date | date: '%Y'" %}
@@ -43,7 +43,16 @@ refactor: true
   text-decoration: none;
   color: #333;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* hiệu ứng xuất hiện balloon */
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.2s ease;
+}
+
+.note-card.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .note-card:hover {
@@ -51,9 +60,9 @@ refactor: true
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.note-card h2 {
+.note-card h3 {
   margin: 10px 0 15px;
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Verdana', cursive; /* handwriting font */
   font-size: 1.4rem;
   line-height: 1.3;
 }
@@ -84,8 +93,8 @@ refactor: true
   font-weight: bold;
   color: #b88b5b;
   margin-bottom: 15px;
-  text-align: left; /* hoặc center nếu bạn thích */
-  white-space: nowrap; /* để năm chỉ chiếm 1 dòng */
+  text-align: left;
+  white-space: nowrap;
 }
 
 .year-notes {
@@ -94,4 +103,20 @@ refactor: true
   gap: 25px;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .note-card h3 { font-size: 1.2rem; }
+  .note-card .note-snippet { font-size: 0.95rem; }
+}
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".note-card");
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 100); // mỗi card delay 100ms
+  });
+});
+</script>
