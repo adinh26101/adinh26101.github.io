@@ -45,14 +45,14 @@ refactor: true
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   
   /* hiệu ứng xuất hiện balloon */
-  transform: translateY(20px);
   opacity: 0;
+  transform: translateY(20px);
   transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.2s ease;
 }
 
 .note-card.show {
-  transform: translateY(0);
-  opacity: 1;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .note-card:hover {
@@ -111,12 +111,16 @@ refactor: true
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const cards = document.querySelectorAll(".note-card");
+  if (cards.length === 0) {
+    console.warn("No note-card elements found!");
+    return;
+  }
   cards.forEach((card, index) => {
     setTimeout(() => {
       card.classList.add("show");
-    }, index * 100); // mỗi card delay 100ms
+    }, index * 100); // delay từng card 100ms
   });
 });
 </script>
