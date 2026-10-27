@@ -206,7 +206,6 @@ defaults:
   - scope:
       path: "_notebooks"
     values:
-      layout: notebook
       published: true
 
 sass:

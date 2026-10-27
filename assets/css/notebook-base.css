@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: #C2C2C0;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f4e6;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #fffdf5;
+  border: 2px solid #f0e8e0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px 15px;
+    font-size: 18px;
+    margin: 20px 10px;
+  }
+}

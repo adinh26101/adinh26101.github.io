@@ -165,36 +165,6 @@
   </div>
 </main>
 
-<!-- Rough Notation JS -->
-<script type="module">
-import { annotate } from "https://unpkg.com/rough-notation?module";
 
-function applyAnnotations() {
-  document.querySelectorAll('.highlight, .underline, .box, .circle, .cross').forEach(el=>{
-    let typeMap={highlight:'highlight', underline:'underline', box:'box', circle:'circle', cross:'crossed-off'};
-    let type = Object.keys(typeMap).find(k => el.classList.contains(k));
-    annotate(el,{type:typeMap[type], color:(type==='highlight'||type==='box')?'#66d7ee':'red', multiline:true, padding:2}).show();
-  });
-}
-
-window.addEventListener('load', applyAnnotations);
-window.addEventListener('resize', ()=>{
-  document.querySelectorAll('svg[data-rough-annotation]').forEach(e=>e.remove());
-  applyAnnotations();
-});
-
-// Intersection Observer chữ ký
-const signature = document.querySelector('.signature-animate');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      entry.target.classList.add('visible'); // gạch ngang chạy cùng
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:0.5});
-observer.observe(signature);
-</script>
 </body>
 </html>

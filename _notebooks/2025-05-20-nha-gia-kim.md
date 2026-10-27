@@ -1,5 +1,5 @@
 ---
-layout: notebook
+layout: notebooks/nha-gia-kim
 title: "Review sách: Nhà Giả Kim"
 note_location: "Không gian sách"
 note_date: "20/5/2025"
