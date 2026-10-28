@@ -1,0 +1,99 @@
+.notebook-footer {
+  text-align: right;
+  font-style: italic;
+  margin-top: 25px;
+  color: #444;
+  width: fit-content;
+}
+
+.note-date {
+  font-size: 20px;
+  opacity: 0.85;
+  transform: rotate(-0.8deg);
+}
+
+.signature-wrapper {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  position: relative;
+}
+
+.signature {
+  font-family: 'Bad Script', cursive;
+  font-size: 28px;
+  color: #444;
+  letter-spacing: 1px;
+  transform: rotate(1.5deg);
+  position: relative;
+}
+
+.signature-animate {
+  opacity: 0;
+  transform: rotate(1.5deg) translateY(30px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.signature-animate.visible {
+  opacity: 1;
+  transform: rotate(1.5deg) translateY(0);
+  transition:
+    opacity 2s ease 0.5s,
+    transform 2s ease 0.5s;
+}
+
+.signature::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #222 30%,
+    #222 70%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.signature.visible::after {
+  animation: drawUnderline 2s ease forwards 2.5s;
+}
+
+@keyframes drawUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.signature-link {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  color: #66d7ee;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.signature-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signature {
+    font-size: 24px;
+  }
+
+  .note-date {
+    font-size: 16px;
+  }
+
+  .signature-link {
+    font-size: 16px;
+  }
+}

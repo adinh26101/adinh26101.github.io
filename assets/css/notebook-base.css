@@ -1,0 +1,61 @@
+
+/* ==========================================
+   GLOBAL BASE
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: #C2C2C0;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f4e6;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Shared page container */
+
+main {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #fffdf536;
+  border: 2px solid #f0e8e0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  main {
+    padding: 32px 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 20px);
+    margin: 20px auto;
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+}
+
+/* Very small screens */
+
+@media (max-width: 380px) {
+  main {
+    width: calc(100% - 16px);
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+}
