@@ -1,44 +1,215 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }} | adinh26101</title>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | adinh26101</title>
 
-    <!-- Favicon & Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/favicons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="Notebook">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="192x192"
+        href="/assets/img/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="/assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon"
+        href="/assets/img/favicons/favicon.ico">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <meta name="apple-mobile-web-app-title" content="Notebook">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
 
-    <!-- Notebook styles -->
-    <link rel="stylesheet" href="{{ '/assets/css/notebook-base.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/notebook-signature.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="{{ '/assets/css/notebook-base.css' | relative_url }}">
+  <link rel="stylesheet"
+        href="{{ '/assets/css/notebook-signature.css' | relative_url }}">
+  <link rel="stylesheet"
+        href="{{ '/assets/css/goesan.css' | relative_url }}">
 </head>
 
 <body>
+
+<div class="autumn-scene" aria-hidden="true">
+
+  <!-- Clouds, mist and rain -->
+  <div class="rain-clouds">
+
+    <div class="mist mist-1"></div>
+    <div class="mist mist-2"></div>
+    <div class="mist mist-3"></div>
+
+    <div class="cloud cloud-1"><i></i></div>
+    <div class="cloud cloud-2"><i></i></div>
+    <div class="cloud cloud-3"><i></i></div>
+
+    <div class="rain rain-1"></div>
+    <div class="rain rain-2"></div>
+    <div class="rain rain-3"></div>
+
+  </div>
+
+  <!-- Maple tree -->
+  <svg class="side-tree maple-tree" viewBox="0 0 180 300">
+    <path d="M90 300 Q82 220 90 145"
+          fill="none" stroke="#78604c"
+          stroke-width="13" stroke-linecap="round"/>
+
+    <path d="M88 210 L47 155 M90 180 L133 120 M89 150 L65 95"
+          fill="none" stroke="#78604c" stroke-width="7"/>
+
+    <g fill="#d97969" stroke="#c9675b" stroke-width="1.5">
+      <path d="M90 15 L106 48 L135 27 L129 62 L163 65
+      L143 88 L168 110 L132 117 L143 149 L108 136
+      L91 163 L75 136 L41 150 L49 117 L14 109
+      L38 85 L17 63 L51 61 L47 29 L76 48 Z"/>
+
+      <path d="M42 83 L24 67 L51 68 L64 44 L77 65
+      L95 52 L102 78 L128 73 L116 96 L137 108
+      L103 112 L94 137 L78 110 L50 122 L60 97 Z"
+      fill="#e89a85" stroke="none"/>
+    </g>
+  </svg>
+
+  <!-- Ginkgo tree -->
+  <svg class="side-tree ginkgo-tree" viewBox="0 0 180 300">
+    <path d="M90 300 Q91 235 90 150"
+          fill="none" stroke="#80634a"
+          stroke-width="12" stroke-linecap="round"/>
+
+    <g fill="#e7c85c" stroke="#d5b449" stroke-width="1.5">
+      <path d="M90 30 Q54 0 47 44 Q15 25 25 68
+      Q-2 89 32 106 Q7 139 48 145 Q48 177 80 157
+      Q90 183 101 157 Q136 179 135 145
+      Q177 138 149 106 Q180 85 151 67
+      Q165 28 132 44 Q125 0 90 30 Z"/>
+
+      <path d="M90 55 Q61 40 57 72 Q34 67 46 91
+      Q29 110 59 117 Q61 140 82 124
+      Q90 145 99 124 Q124 139 126 116
+      Q154 108 134 90 Q145 67 121 72
+      Q116 40 90 55 Z"
+      fill="#f0d978" stroke="none"/>
+    </g>
+  </svg>
+
+</div>
+
 <main>
   <h1>{{ page.title }}</h1>
 
   <div class="notebook-content">
     {{ content }}
   </div>
-  <div style="display: flex; justify-content: flex-end;">
-    <div class="notebook-footer">
-      <p class="note-date">{{ page.note_location }}, ngày {{ page.note_date }}</p>
+
+<script>
+document.querySelectorAll(".video-card").forEach(card => {
+  const id = card.dataset.videoId;
+
+  card.style.backgroundImage =
+    `url("https://img.youtube.com/vi/${id}/maxresdefault.jpg")`;
+
+  card.querySelector(".video-play").addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.src =
+      `https://www.youtube.com/embed/${id}?autoplay=1`;
+    iframe.title = "YouTube video";
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+
+    card.replaceChildren(iframe);
+    card.classList.add("is-playing");
+  });
+});
+</script>
+
+  <!-- Footer -->
+  <div class="notebook-footer">
+
+    <!-- Car and road on the left -->
+    <div class="road-trip" aria-hidden="true">
+      <svg viewBox="0 0 220 115">
+
+        <!-- Five passengers -->
+        <g stroke="#725a4d" stroke-width="1.5">
+          <circle cx="48" cy="24" r="10" fill="#f0c6a0"/>
+          <circle cx="77" cy="16" r="10" fill="#e7b98c"/>
+          <circle cx="105" cy="22" r="10" fill="#f0c6a0"/>
+          <circle cx="134" cy="16" r="10" fill="#e7b98c"/>
+          <circle cx="162" cy="24" r="10" fill="#f0c6a0"/>
+        </g>
+
+        <g fill="#7b8fae">
+          <path d="M37 38 Q48 28 59 38 L63 54 L33 54 Z"/>
+          <path d="M66 30 Q77 20 88 30 L92 49 L62 49 Z"
+                fill="#d7a64e"/>
+          <path d="M94 36 Q105 26 116 36 L120 54 L90 54 Z"
+                fill="#91a9a0"/>
+          <path d="M123 30 Q134 20 145 30 L149 49 L119 49 Z"
+                fill="#c77d80"/>
+          <path d="M151 38 Q162 28 173 38 L177 54 L147 54 Z"
+                fill="#8197ba"/>
+        </g>
+
+        <!-- Car body -->
+        <path d="M20 70 L33 51 Q38 45 51 45
+                 L151 45 Q165 45 174 57
+                 L193 70 L203 75 L203 94
+                 L16 94 L16 77 Z"
+              fill="#8bb9cb"
+              stroke="#537e91"
+              stroke-width="3"/>
+
+        <path d="M43 53 L83 53 L83 69 L31 69 Z"
+              fill="#d9edf0"
+              stroke="#537e91"
+              stroke-width="2"/>
+
+        <path d="M91 53 L149 53 Q158 53 165 69 L91 69 Z"
+              fill="#d9edf0"
+              stroke="#537e91"
+              stroke-width="2"/>
+
+        <rect x="18" y="74" width="183" height="8"
+              rx="3" fill="#e9d9a9"/>
+
+        <!-- Wheels -->
+        <circle cx="52" cy="94" r="14" fill="#4e555a"/>
+        <circle cx="52" cy="94" r="7" fill="#d9d8d0"/>
+
+        <circle cx="166" cy="94" r="14" fill="#4e555a"/>
+        <circle cx="166" cy="94" r="7" fill="#d9d8d0"/>
+
+      </svg>
+
+      <!-- Road beneath the car -->
+      <div class="road"></div>
+    </div>
+
+    <!-- Signature on the right -->
+    <div class="notebook-footer-content">
+      <p class="note-date">
+        {{ page.note_location }}, ngày {{ page.note_date }}
+      </p>
+
       <div class="signature-wrapper">
-        <p class="signature signature-animate">{{ page.signature }}</p>
-        <a class="signature-link" href="/notebooks">adinh26101.github.io</a>
+        <p class="signature signature-animate">
+          {{ page.signature }}
+        </p>
+
+        <a class="signature-link" href="/notebooks">
+          adinh26101.github.io
+        </a>
       </div>
     </div>
+
   </div>
 </main>
 
-<script src="{{ '/assets/js/notebook-signature.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/notebook-signature.js' | relative_url }}"
+        defer></script>
 
 </body>
 </html>
