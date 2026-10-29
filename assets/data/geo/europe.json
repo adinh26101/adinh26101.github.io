@@ -1,0 +1,97 @@
+{
+  "id": "europe",
+  "name": "Châu Âu",
+  "label": "EUROPE",
+  "center": [13.405, 52.52],
+  "zoom": 3.7,
+  "subtitle": "Đồng bằng, núi và những hành lang kết nối",
+  "caption": "Địa hình châu Âu tạo nên các tuyến kết nối, ranh giới tự nhiên và những vùng chiến lược đan xen.",
+  "intro": "Từ đồng bằng Bắc Âu đến dãy Alps và eo biển Manche, địa lý giúp lý giải sự kết nối giữa các quốc gia châu Âu.",
+  "notes": [
+    {
+      "id": "berlin",
+      "title": "Berlin",
+      "location": [13.405, 52.52],
+      "description": "Berlin là thủ đô Đức, nằm trong vùng đồng bằng Bắc Âu và có vị trí kết nối với Trung Âu cùng Đông Âu."
+    },
+    {
+      "id": "alps",
+      "title": "Dãy Alps",
+      "location": [10.5, 46.5],
+      "description": "Dãy Alps tạo thành một rào cản địa hình lớn giữa Trung Âu và bán đảo Italy, ảnh hưởng đến giao thông và khí hậu."
+    },
+    {
+      "id": "english-channel",
+      "title": "Eo biển Manche",
+      "location": [0, 50.5],
+      "description": "Eo biển Manche ngăn cách đảo Anh với phần lục địa châu Âu, đồng thời là hành lang hàng hải quan trọng."
+    },
+    {
+      "id": "north-european-plain",
+      "title": "Đồng bằng Bắc Âu",
+      "location": [20, 53],
+      "description": "Đồng bằng Bắc Âu trải dài qua nhiều quốc gia, tạo điều kiện thuận lợi cho nông nghiệp, giao thông và sự kết nối trên bộ."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "germany-country",
+        "properties": {
+          "name": "Đức",
+          "category": "countries",
+          "description": "Quốc gia nằm ở Trung Âu, giữ vị trí kết nối giữa nhiều vùng của lục địa.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[5.8, 55.1], [8, 55], [10, 54.8], [14.8, 54.8], [15, 51], [13.8, 48.7], [10, 47.3], [7, 47.5], [5.8, 50], [5.8, 55.1]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "north-european-plain",
+        "properties": {
+          "name": "Đồng bằng Bắc Âu",
+          "category": "terrain",
+          "description": "Vùng đồng bằng trải qua nhiều quốc gia, là hành lang tự nhiên quan trọng cho giao thông và phát triển kinh tế.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-1, 54], [5, 57], [15, 57], [25, 56], [30, 52], [25, 48], [15, 48], [7, 50], [-1, 54]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "alps",
+        "properties": {
+          "name": "Dãy Alps",
+          "category": "terrain",
+          "description": "Hệ thống núi lớn ở Trung Âu, tạo ranh giới địa hình và ảnh hưởng đến các tuyến giao thông qua núi.",
+          "color": "#8D9D83"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[5.5, 47], [7, 48], [11, 47.8], [15, 47], [16, 45.5], [12, 44.5], [7, 45], [5.5, 47]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "english-channel",
+        "properties": {
+          "name": "Eo biển Manche",
+          "category": "strategic",
+          "description": "Hành lang hàng hải giữa đảo Anh và lục địa châu Âu.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-2, 51.5], [1, 51.5], [3, 50.5], [1, 49.7], [-2, 50.2], [-2, 51.5]]]
+        }
+      }
+    ]
+  }
+}

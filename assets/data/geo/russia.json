@@ -1,0 +1,97 @@
+{
+  "id": "russia",
+  "name": "Nga",
+  "label": "RUSSIA",
+  "center": [37.6173, 55.7558],
+  "zoom": 3.2,
+  "subtitle": "Không gian rộng lớn và chiều sâu chiến lược",
+  "caption": "Đồng bằng, núi và các vùng tiếp giáp định hình cách Nga tổ chức phòng thủ và mở rộng ảnh hưởng.",
+  "intro": "Từ đồng bằng Đông Âu đến dãy Ural, địa lý giúp lý giải nhiều lựa chọn chiến lược của Nga.",
+  "notes": [
+    {
+      "id": "moscow",
+      "title": "Moscow",
+      "location": [37.6173, 55.7558],
+      "description": "Moscow là trung tâm chính trị của Nga. Vị trí trong phần phía tây đất nước khiến thành phố gắn chặt với lịch sử và không gian chiến lược châu Âu."
+    },
+    {
+      "id": "east-european-plain",
+      "title": "Đồng bằng Đông Âu",
+      "location": [35, 54],
+      "description": "Đồng bằng Đông Âu là vùng địa hình rộng lớn, tạo điều kiện cho giao thông đường bộ và các cuộc hành quân quy mô lớn. Tuy nhiên, phạm vi của đồng bằng vượt qua biên giới nhiều quốc gia."
+    },
+    {
+      "id": "ural-mountains",
+      "title": "Dãy Ural",
+      "location": [60, 60],
+      "description": "Dãy Ural thường được xem là ranh giới địa lý quy ước giữa châu Âu và châu Á. Dãy núi cũng đánh dấu sự chuyển tiếp giữa các vùng địa lý rộng lớn của Nga."
+    },
+    {
+      "id": "black-sea",
+      "title": "Biển Đen",
+      "location": [34, 43],
+      "description": "Biển Đen kết nối các không gian hàng hải quan trọng và có ảnh hưởng lớn đến thương mại, vận tải và an ninh khu vực."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "russia-country",
+        "properties": {
+          "name": "Nga",
+          "category": "countries",
+          "description": "Quốc gia có lãnh thổ trải dài qua Đông Âu và Bắc Á.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[28, 68], [45, 70], [60, 68], [80, 70], [100, 68], [130, 62], [160, 60], [175, 65], [160, 72], [120, 75], [80, 74], [50, 72], [28, 68]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "east-european-plain",
+        "properties": {
+          "name": "Đồng bằng Đông Âu",
+          "category": "terrain",
+          "description": "Vùng đồng bằng rộng lớn kéo dài qua nhiều quốc gia. Đây là một đặc điểm địa hình quan trọng trong lịch sử giao thông và quân sự châu Âu.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[20, 60], [25, 65], [45, 65], [55, 60], [50, 48], [40, 45], [25, 48], [20, 55], [20, 60]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "ural-region",
+        "properties": {
+          "name": "Dãy Ural",
+          "category": "terrain",
+          "description": "Dãy núi tạo nên một ranh giới địa lý quy ước giữa châu Âu và châu Á.",
+          "color": "#8D9D83"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[55, 68], [63, 67], [66, 60], [62, 52], [57, 51], [54, 59], [55, 68]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "black-sea-region",
+        "properties": {
+          "name": "Không gian Biển Đen",
+          "category": "strategic",
+          "description": "Không gian hàng hải quan trọng đối với thương mại, vận tải và an ninh ở khu vực tiếp giáp Đông Âu và Tây Á.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[27, 47], [34, 48], [42, 46], [42, 40], [34, 40], [27, 42], [27, 47]]]
+        }
+      }
+    ]
+  }
+}

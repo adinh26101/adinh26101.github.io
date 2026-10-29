@@ -1,0 +1,97 @@
+{
+  "id": "usa",
+  "name": "Hoa Kỳ",
+  "label": "UNITED STATES",
+  "center": [-98.5795, 39.8283],
+  "zoom": 3.2,
+  "subtitle": "Hai đại dương và không gian nội địa",
+  "caption": "Đại dương, đồng bằng và các dãy núi tạo nên những lợi thế địa lý khác nhau của Hoa Kỳ.",
+  "intro": "Địa hình Bắc Mỹ ảnh hưởng đến giao thông nội địa, nông nghiệp, phòng thủ và khả năng tiếp cận hai đại dương.",
+  "notes": [
+    {
+      "id": "washington-dc",
+      "title": "Washington, D.C.",
+      "location": [-77.0369, 38.9072],
+      "description": "Washington, D.C. là thủ đô Hoa Kỳ, nằm gần bờ Đại Tây Dương và trung tâm của vùng duyên hải phía đông."
+    },
+    {
+      "id": "rocky-mountains",
+      "title": "Dãy Rocky",
+      "location": [-106, 40],
+      "description": "Dãy Rocky chạy theo hướng bắc-nam qua miền tây Bắc Mỹ, ảnh hưởng đến khí hậu, lưu vực sông và các tuyến giao thông."
+    },
+    {
+      "id": "central-plains",
+      "title": "Đồng bằng Trung tâm",
+      "location": [-98, 39],
+      "description": "Các vùng đồng bằng rộng lớn hỗ trợ nông nghiệp và kết nối giao thông xuyên lục địa."
+    },
+    {
+      "id": "panama-canal",
+      "title": "Kênh đào Panama",
+      "location": [-79.68, 9.08],
+      "description": "Kênh đào Panama nằm ở Trung Mỹ, kết nối Đại Tây Dương và Thái Bình Dương qua một tuyến hàng hải quan trọng."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "usa-country",
+        "properties": {
+          "name": "Hoa Kỳ - phần lục địa tiếp giáp",
+          "category": "countries",
+          "description": "Phạm vi minh họa của phần lục địa tiếp giáp Hoa Kỳ; không bao gồm Alaska và Hawaii.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-124, 48], [-117, 49], [-105, 49], [-95, 49], [-82, 45], [-67, 45], [-70, 30], [-81, 25], [-97, 26], [-110, 31], [-117, 33], [-124, 40], [-124, 48]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "rocky-mountains",
+        "properties": {
+          "name": "Dãy Rocky",
+          "category": "terrain",
+          "description": "Dãy núi lớn chạy dọc miền tây Bắc Mỹ, ảnh hưởng đến khí hậu, lưu vực sông và giao thông.",
+          "color": "#8D9D83"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-116, 49], [-108, 49], [-102, 42], [-105, 31], [-111, 31], [-115, 40], [-116, 49]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "central-plains",
+        "properties": {
+          "name": "Đồng bằng Trung tâm",
+          "category": "terrain",
+          "description": "Vùng đồng bằng rộng lớn có vai trò quan trọng đối với nông nghiệp và giao thông nội địa.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-105, 49], [-96, 49], [-90, 44], [-90, 31], [-101, 29], [-105, 37], [-105, 49]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "panama-canal-region",
+        "properties": {
+          "name": "Khu vực kênh đào Panama",
+          "category": "strategic",
+          "description": "Tuyến hàng hải nhân tạo kết nối Đại Tây Dương và Thái Bình Dương qua Trung Mỹ.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-80.5, 9.8], [-79, 10], [-78.5, 8.5], [-80, 7.8], [-80.5, 9.8]]]
+        }
+      }
+    ]
+  }
+}

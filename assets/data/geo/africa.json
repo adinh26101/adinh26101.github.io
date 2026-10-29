@@ -1,0 +1,97 @@
+{
+  "id": "africa",
+  "name": "Châu Phi",
+  "label": "AFRICA",
+  "center": [20, 0],
+  "zoom": 3.1,
+  "subtitle": "Sa mạc, lưu vực sông và các cửa ngõ hàng hải",
+  "caption": "Các vùng khí hậu và địa hình rộng lớn ảnh hưởng đến dân cư, giao thông và khả năng kết nối của châu Phi.",
+  "intro": "Từ Sahara đến lưu vực Congo và mũi Hảo Vọng, các đặc điểm địa lý tạo nên những điều kiện khác biệt giữa các vùng.",
+  "notes": [
+    {
+      "id": "cairo",
+      "title": "Cairo",
+      "location": [31.2357, 30.0444],
+      "description": "Cairo nằm gần đồng bằng châu thổ sông Nile, nơi hệ thống sông tạo điều kiện cho dân cư và nông nghiệp phát triển."
+    },
+    {
+      "id": "sahara",
+      "title": "Sa mạc Sahara",
+      "location": [10, 23],
+      "description": "Sahara là vùng sa mạc nóng rộng lớn, tạo ra những thách thức đáng kể đối với giao thông đường bộ và sự phân bố dân cư."
+    },
+    {
+      "id": "congo-basin",
+      "title": "Lưu vực Congo",
+      "location": [22, -2],
+      "description": "Lưu vực Congo có hệ thống sông và rừng mưa nhiệt đới rộng lớn, ảnh hưởng mạnh đến giao thông và sử dụng đất."
+    },
+    {
+      "id": "cape-of-good-hope",
+      "title": "Mũi Hảo Vọng",
+      "location": [18.5, -34.35],
+      "description": "Mũi Hảo Vọng nằm ở phía tây nam Nam Phi, gần các tuyến hàng hải nối Đại Tây Dương và Ấn Độ Dương."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "egypt-country",
+        "properties": {
+          "name": "Ai Cập",
+          "category": "countries",
+          "description": "Quốc gia ở đông bắc châu Phi, có phần lớn dân cư tập trung quanh sông Nile và vùng châu thổ.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[25, 31.7], [34.9, 31.7], [36.9, 22], [25, 22], [25, 31.7]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "sahara",
+        "properties": {
+          "name": "Sa mạc Sahara",
+          "category": "terrain",
+          "description": "Vùng sa mạc rộng lớn trải dài qua phần lớn Bắc Phi, ảnh hưởng đến khí hậu, giao thông và phân bố dân cư.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[-17, 30], [-10, 34], [10, 32], [30, 31], [36, 22], [25, 15], [5, 15], [-10, 20], [-17, 30]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "congo-basin",
+        "properties": {
+          "name": "Lưu vực Congo",
+          "category": "terrain",
+          "description": "Vùng lưu vực sông rộng lớn ở Trung Phi, gắn với hệ thống sông Congo và rừng mưa nhiệt đới.",
+          "color": "#8D9D83"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[12, 5], [18, 7], [28, 5], [31, -3], [25, -9], [17, -8], [12, -3], [12, 5]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "cape-of-good-hope-region",
+        "properties": {
+          "name": "Vùng Mũi Hảo Vọng",
+          "category": "strategic",
+          "description": "Vùng ở phía tây nam Nam Phi, gần các tuyến hàng hải quan trọng quanh mũi phía nam châu Phi.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[17, -33], [21, -33], [23, -35], [19, -36], [17, -33]]]
+        }
+      }
+    ]
+  }
+}

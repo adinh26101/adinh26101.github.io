@@ -1,0 +1,111 @@
+{
+  "id": "china",
+  "name": "Trung Quốc",
+  "label": "CHINA",
+  "center": [104.1954, 35.8617],
+  "zoom": 3.4,
+  "subtitle": "Địa hình đa dạng và các vùng đệm",
+  "caption": "Đồng bằng phía đông, cao nguyên phía tây và các vùng biên giới tạo nên những điều kiện địa lý khác nhau.",
+  "intro": "Từ duyên hải đông dân đến cao nguyên Tây Tạng và Tân Cương, địa hình ảnh hưởng đến kết nối và quản trị lãnh thổ.",
+  "notes": [
+    {
+      "id": "beijing",
+      "title": "Bắc Kinh",
+      "location": [116.4074, 39.9042],
+      "description": "Bắc Kinh là thủ đô và trung tâm chính trị của Trung Quốc, nằm ở phía bắc đồng bằng Hoa Bắc."
+    },
+    {
+      "id": "shanghai",
+      "title": "Thượng Hải",
+      "location": [121.4737, 31.2304],
+      "description": "Thượng Hải nằm ở vùng cửa sông Trường Giang và là một trong những trung tâm kinh tế, cảng biển quan trọng của Trung Quốc."
+    },
+    {
+      "id": "tibetan-plateau",
+      "title": "Cao nguyên Tây Tạng",
+      "location": [88, 32],
+      "description": "Cao nguyên Tây Tạng có độ cao lớn, ảnh hưởng đến khí hậu, hệ thống sông và khả năng di chuyển qua khu vực."
+    },
+    {
+      "id": "xinjiang",
+      "title": "Tân Cương",
+      "location": [85, 42],
+      "description": "Tân Cương nằm ở phía tây Trung Quốc, có địa hình gồm các bồn địa, sa mạc và dãy núi, đồng thời giữ vị trí kết nối với Trung Á."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "china-country",
+        "properties": {
+          "name": "Trung Quốc",
+          "category": "countries",
+          "description": "Quốc gia có địa hình đa dạng, từ đồng bằng duyên hải đến cao nguyên và sa mạc nội địa.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[74, 39], [80, 49], [95, 53], [120, 50], [134, 47], [131, 32], [122, 22], [105, 20], [92, 28], [80, 30], [74, 39]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "tibetan-plateau",
+        "properties": {
+          "name": "Cao nguyên Tây Tạng",
+          "category": "terrain",
+          "description": "Vùng cao nguyên rộng lớn có vai trò quan trọng đối với khí hậu, sông ngòi và địa hình châu Á.",
+          "color": "#8D9D83"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[78, 36], [82, 40], [92, 38], [100, 33], [96, 27], [85, 27], [78, 31], [78, 36]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "xinjiang-autonomous",
+        "properties": {
+          "name": "Khu tự trị Duy Ngô Nhĩ Tân Cương",
+          "category": "autonomous",
+          "description": "Đơn vị hành chính cấp tỉnh ở phía tây bắc Trung Quốc, có địa hình gồm sa mạc, bồn địa và núi.",
+          "color": "#B28BC5"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[73, 48], [80, 49], [90, 47], [96, 43], [91, 36], [80, 36], [75, 40], [73, 48]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "tibet-autonomous",
+        "properties": {
+          "name": "Khu tự trị Tây Tạng",
+          "category": "autonomous",
+          "description": "Đơn vị hành chính cấp tỉnh ở cao nguyên Tây Tạng. Polygon minh họa cần được chỉnh theo ranh giới hành chính chính thức.",
+          "color": "#B28BC5"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[78, 36], [85, 37], [93, 35], [99, 31], [96, 27], [85, 27], [80, 29], [78, 36]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "inner-mongolia-autonomous",
+        "properties": {
+          "name": "Khu tự trị Nội Mông",
+          "category": "autonomous",
+          "description": "Khu tự trị nằm ở phía bắc Trung Quốc, trải dài dọc một phần biên giới với Mông Cổ.",
+          "color": "#B28BC5"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[97, 42], [105, 45], [115, 48], [122, 46], [119, 42], [110, 40], [100, 40], [97, 42]]]
+        }
+      }
+    ]
+  }
+}
