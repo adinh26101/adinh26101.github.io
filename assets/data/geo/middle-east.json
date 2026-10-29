@@ -1,0 +1,111 @@
+{
+  "id": "middle-east",
+  "name": "Trung Đông",
+  "label": "MIDDLE EAST",
+  "center": [43, 31],
+  "zoom": 4,
+  "subtitle": "Sa mạc, hành lang hàng hải và các điểm nghẽn",
+  "caption": "Sa mạc rộng lớn và những tuyến hàng hải hẹp khiến một số địa điểm có ý nghĩa chiến lược vượt xa quy mô địa lý của chúng.",
+  "intro": "Từ eo biển Hormuz đến kênh đào Suez và vùng Lưỡng Hà, địa hình cùng vị trí kết nối đóng vai trò quan trọng trong lịch sử khu vực.",
+  "notes": [
+    {
+      "id": "istanbul",
+      "title": "Istanbul",
+      "location": [28.9784, 41.0082],
+      "description": "Istanbul nằm hai bên eo biển Bosphorus, một điểm kết nối giữa Biển Đen và Địa Trung Hải thông qua hệ thống eo biển Thổ Nhĩ Kỳ."
+    },
+    {
+      "id": "strait-of-hormuz",
+      "title": "Eo biển Hormuz",
+      "location": [56.5, 26.5],
+      "description": "Eo biển Hormuz kết nối Vịnh Ba Tư với Vịnh Oman, giữ vai trò quan trọng trong vận chuyển năng lượng toàn cầu."
+    },
+    {
+      "id": "suez-canal",
+      "title": "Kênh đào Suez",
+      "location": [32.35, 30.5],
+      "description": "Kênh đào Suez nối Địa Trung Hải với Biển Đỏ, rút ngắn tuyến hàng hải giữa châu Âu và châu Á."
+    },
+    {
+      "id": "mesopotamia",
+      "title": "Lưỡng Hà",
+      "location": [44, 33],
+      "description": "Lưỡng Hà nằm giữa các hệ thống sông Tigris và Euphrates, là một trong những vùng trung tâm của các nền văn minh cổ đại."
+    }
+  ],
+  "highlights": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "iraq-country",
+        "properties": {
+          "name": "Iraq",
+          "category": "countries",
+          "description": "Quốc gia nằm ở Tây Á, bao gồm một phần đáng kể của vùng Lưỡng Hà.",
+          "color": "#6686A8"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[45.420618, 35.977546], [46.07634, 35.677383], [46.151788, 35.093259], [45.64846, 34.748138], [45.416691, 33.967798], [46.109362, 33.017287], [47.334661, 32.469155], [47.849204, 31.709176], [47.685286, 30.984853], [48.004698, 30.985137], [48.014568, 30.452457], [48.567971, 29.926778], [47.974519, 29.975819], [47.302622, 30.05907], [46.568713, 29.099025], [44.709499, 29.178891], [41.889981, 31.190009], [40.399994, 31.889992], [39.195468, 32.161009], [38.792341, 33.378686], [41.006159, 34.419372], [41.383965, 35.628317], [41.289707, 36.358815], [41.837064, 36.605854], [42.349591, 37.229873], [42.779126, 37.385264], [43.942259, 37.256228], [44.293452, 37.001514], [44.772699, 37.170445], [45.420618, 35.977546]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "mesopotamia",
+        "properties": {
+          "name": "Lưỡng Hà",
+          "category": "terrain",
+          "description": "Vùng địa lý lịch sử gắn với hai hệ thống sông Tigris và Euphrates.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[31.52842441136962,30.07623871418346],[32.50147470899712,30.9773439138889],[34.92242460152482,31.29516872917013],[36.76055909824396,33.50460245643568],[37.20123094650943,35.21765956675419],[38.14973726334268,34.42008430032695],[40.8517329082349,33.40514538986501],[47.2854173801954,28.77087448246322],[47.69472935377968,29.20797567672636],[48.52348516949416,30.22376931535921],[50.48265981293645,30.20902756716432],[42.97955074995139,34.97754095534157],[38.97359937687499,37.32389469180809],[36.78125695110425,37.49424223440845],[36.07797715162377,36.75815881442096],[35.94474327394744,35.64292774384011],[35.74491249480887,34.32890100941795],[35.05507427400582,32.60173563530335],[34.04101856771189,31.23430094277022],[32.08055165020467,31.32133676732958],[30.47149842007419,31.47429748852575],[29.66715617312786,30.78178155863761],[31.03620844155014,29.67540376156396],[30.38325695051509,28.26242241681901],[31.52842441136962,30.07623871418346]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "sahara-desert",
+        "properties": {
+          "name": "Rìa phía đông Sahara",
+          "category": "terrain",
+          "description": "Vùng sa mạc rộng lớn ở Bắc Phi, có ảnh hưởng đến các tuyến giao thông và sự phân bố dân cư.",
+          "color": "#D8B56D"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[25,31],[25,23],[24,17],[23,13],[28,12],[33,12],[34,17],[36,17],[37,19],[35,24],[32,28],[31,30],[25,31]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "hormuz-region",
+        "properties": {
+          "name": "Eo biển Hormuz",
+          "category": "strategic",
+          "description": "Điểm nghẽn hàng hải nối Vịnh Ba Tư với Vịnh Oman, có vai trò quan trọng đối với vận chuyển năng lượng.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[56.53612131597778,27.37955617542728],[55.98956259657695,26.20104990363141],[56.85510917981889,25.91365790980858],[57.31708300940934,27.11713447714025],[56.53612131597778,27.37955617542728]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "suez-region",
+        "properties": {
+          "name": "Khu vực kênh đào Suez",
+          "category": "strategic",
+          "description": "Hành lang hàng hải kết nối Địa Trung Hải với Biển Đỏ.",
+          "color": "#729CB7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[32.14187001701922,31.33834277964286],[32.36114372835301,29.61555855315432],[32.81647328406747,29.6980835044804],[32.53103281325612,31.30993333129701],[32.14187001701922,31.33834277964286]]]
+        }
+      }
+    ]
+  }
+}

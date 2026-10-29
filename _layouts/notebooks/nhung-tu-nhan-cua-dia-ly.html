@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | adinh26101</title>
+
+  <link rel="apple-touch-icon" sizes="192x192"
+        href="/assets/img/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="/assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon"
+        href="/assets/img/favicons/favicon.ico">
+
+  <meta name="apple-mobile-web-app-title" content="Notebook">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="geo-journal" class="geo-journal">
+    <header class="geo-header">
+
+      <div class="geo-header__main">
+        <div>
+          <h1>Tim Marshall - Những tù nhân của địa lý</h1>
+          <p class="geo-header__description">
+            Một hành trình đọc thế giới qua những đường biên, dãy núi và vùng đất định hình vận mệnh các quốc gia.
+          </p>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="geo-workspace">
+
+      <!-- LEFT: SIDEBAR -->
+      <aside class="geo-sidebar">
+
+        <!-- 00. MAP ACTIONS -->
+        <section class="geo-sidebar__section">
+          <div class="geo-section-heading">
+            <span class="geo-section-heading__number">MAP</span>
+            <h2>Actions</h2>
+          </div>
+
+          <div class="geo-map-actions">
+            <button type="button" id="geo-reset" class="geo-reset">
+              <span>↺</span>
+              Đặt lại bản đồ
+            </button>
+          </div>
+        </section>
+
+        <!-- 01. BASE MAP LAYERS -->
+        <section class="geo-sidebar__section">
+          <div class="geo-section-heading">
+            <span class="geo-section-heading__number">01</span>
+            <h2>Lớp bản đồ</h2>
+          </div>
+
+          <div class="geo-layer-group">
+            <div class="geo-layer-group__heading">LỚP ĐỊA LÝ</div>
+
+            <div class="geo-layer-list">
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--border"></span>
+                <span class="geo-layer__text">
+                  <strong>Biên giới</strong>
+                  <small>Ranh giới quốc gia</small>
+                </span>
+                <input type="checkbox" data-layer="borders" checked>
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--river"></span>
+                <span class="geo-layer__text">
+                  <strong>Sông ngòi</strong>
+                  <small>Mạng lưới thủy văn</small>
+                </span>
+                <input type="checkbox" data-layer="rivers">
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--mountain">△</span>
+                <span class="geo-layer__text">
+                  <strong>Núi & địa hình</strong>
+                  <small>Vùng núi quan trọng</small>
+                </span>
+                <input type="checkbox" data-layer="mountains">
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--plain">▱</span>
+                <span class="geo-layer__text">
+                  <strong>Đồng bằng</strong>
+                  <small>Vùng đất thấp</small>
+                </span>
+                <input type="checkbox" data-layer="plains">
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--desert">∿</span>
+                <span class="geo-layer__text">
+                  <strong>Sa mạc</strong>
+                  <small>Vùng khô hạn</small>
+                </span>
+                <input type="checkbox" data-layer="deserts">
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--focus">◎</span>
+                <span class="geo-layer__text">
+                  <strong>Địa điểm nghiên cứu</strong>
+                  <small>Các điểm ghi chú</small>
+                </span>
+                <input type="checkbox" data-layer="regions" checked>
+                <span class="geo-switch"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02. HIGHLIGHT POLYGONS -->
+        <section class="geo-sidebar__section">
+          <div class="geo-section-heading">
+            <span class="geo-section-heading__number">02</span>
+            <h2>Vùng được đánh dấu</h2>
+          </div>
+
+          <div class="geo-layer-group geo-layer-group--highlights">
+            <div class="geo-layer-group__heading">VÙNG ĐỊA LÝ</div>
+
+            <div class="geo-layer-list">
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--highlight-terrain"></span>
+                <span class="geo-layer__text">
+                  <strong>Vùng địa hình</strong>
+                  <small>Đồng bằng, cao nguyên, núi</small>
+                </span>
+                <input type="checkbox" data-layer="highlight-terrain" checked>
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--highlight-country"></span>
+                <span class="geo-layer__text">
+                  <strong>Quốc gia</strong>
+                  <small>Phạm vi lãnh thổ được chọn</small>
+                </span>
+                <input type="checkbox" data-layer="highlight-countries" checked>
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--highlight-autonomous"></span>
+                <span class="geo-layer__text">
+                  <strong>Khu vực tự trị</strong>
+                  <small>Các đơn vị hành chính tự trị</small>
+                </span>
+                <input type="checkbox" data-layer="highlight-autonomous" checked>
+                <span class="geo-switch"></span>
+              </label>
+
+              <label class="geo-layer">
+                <span class="geo-layer__symbol geo-layer__symbol--highlight-strategic"></span>
+                <span class="geo-layer__text">
+                  <strong>Điểm chiến lược</strong>
+                  <small>Eo biển, hành lang, điểm nghẽn</small>
+                </span>
+                <input type="checkbox" data-layer="highlight-strategic" checked>
+                <span class="geo-switch"></span>
+              </label>
+            </div>
+          </div>
+
+          <p class="geo-sidebar__hint">
+            Rê chuột lên vùng được đánh dấu để xem thông tin.
+            Nhấp vào vùng để mở ghi chú chi tiết.
+          </p>
+        </section>
+
+        <!-- 03. PLACES -->
+        <section class="geo-sidebar__section">
+          <div class="geo-section-heading">
+            <span class="geo-section-heading__number">03</span>
+            <h2>Địa điểm đáng chú ý</h2>
+            <span class="geo-count" id="geo-notes-count">04</span>
+          </div>
+
+          <div id="geo-notes" class="geo-notes"></div>
+        </section>
+
+      </aside>
+
+      <!-- RIGHT: MAP PANEL -->
+      <main class="geo-map-panel">
+
+        <!-- HORIZONTAL REGION NAVIGATION -->
+        <nav class="geo-region-nav" aria-label="Chọn khu vực">
+          <div class="geo-region-list">
+            <button type="button"
+                    class="geo-region is-active"
+                    data-region="russia"
+                    aria-pressed="true">
+              <span class="geo-region__index">01</span>
+              <span class="geo-region__name">Nga & vùng đệm</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+
+            <button type="button"
+                    class="geo-region"
+                    data-region="china"
+                    aria-pressed="false">
+              <span class="geo-region__index">02</span>
+              <span class="geo-region__name">Trung Quốc</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+
+            <button type="button"
+                    class="geo-region"
+                    data-region="usa"
+                    aria-pressed="false">
+              <span class="geo-region__index">03</span>
+              <span class="geo-region__name">Hoa Kỳ</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+
+            <button type="button"
+                    class="geo-region"
+                    data-region="europe"
+                    aria-pressed="false">
+              <span class="geo-region__index">04</span>
+              <span class="geo-region__name">Châu Âu</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+
+            <button type="button"
+                    class="geo-region"
+                    data-region="middle-east"
+                    aria-pressed="false">
+              <span class="geo-region__index">05</span>
+              <span class="geo-region__name">Trung Đông</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+
+            <button type="button"
+                    class="geo-region"
+                    data-region="africa"
+                    aria-pressed="false">
+              <span class="geo-region__index">06</span>
+              <span class="geo-region__name">Châu Phi</span>
+              <span class="geo-region__arrow">↗</span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="geo-map-frame">
+          <div id="geo-map-stage" class="geo-map-stage">
+            <div id="geo-map-loading" class="geo-map-loading">
+              <span class="geo-loading-mark">◎</span>
+              <span class="geo-map-loading__text">Đang mở bản đồ...</span>
+            </div>
+
+            <div id="geo-map" aria-label="Bản đồ địa lý tương tác"></div>
+
+            <div class="geo-map-overlay geo-map-overlay--top-left">
+              <span class="geo-map-overlay__eyebrow">KHU VỰC ĐANG XEM</span>
+              <div class="geo-map-heading">
+                <h2 id="geo-map-title">Nga</h2>
+                <p id="geo-map-subtitle">
+                  Địa hình, khoảng cách và chiều sâu chiến lược
+                </p>
+              </div>
+            </div>
+
+            <div class="geo-compass" aria-label="La bàn">
+              <span class="geo-compass__north">N</span>
+              <span class="geo-compass__needle">▲</span>
+              <span class="geo-compass__south">S</span>
+            </div>
+
+            <div class="geo-map-overlay geo-map-overlay--bottom-left">
+              <span>WGS 84</span>
+              <span class="geo-map-overlay__separator">/</span>
+              <span>ATLAS 01</span>
+            </div>
+
+            <button
+              type="button"
+              id="geo-map-reset-view"
+              class="geo-map-reset-view"
+              aria-label="Trở về góc nhìn khu vực"
+              title="Trở về góc nhìn khu vực"
+            >⌖</button>
+          </div>
+
+          <div class="geo-map-caption">
+            <div>
+              <span class="geo-map-caption__mark">FIG.</span>
+              <span id="geo-map-caption">Địa lý định hình chiến lược</span>
+            </div>
+
+            <span class="geo-map-caption__hint">
+              Kéo để di chuyển · Cuộn để phóng to
+            </span>
+          </div>
+        </div>
+
+        <!-- SELECTED PLACE / POLYGON DETAILS -->
+        <section class="geo-place-card" id="geo-note-detail">
+          <div class="geo-place-card__index">
+            <span>ĐỊA ĐIỂM</span>
+            <strong>—</strong>
+          </div>
+
+          <div class="geo-place-card__body">
+            <span class="geo-place-card__eyebrow">GHI CHÚ ĐỊA LÝ</span>
+            <h3>Chọn một địa điểm trên bản đồ</h3>
+            <p>
+              Chọn một địa điểm đáng chú ý hoặc nhấp vào vùng được đánh dấu
+              để xem nội dung chi tiết.
+            </p>
+          </div>
+
+          <div class="geo-place-card__coordinates">
+            <span>VĨ ĐỘ / KINH ĐỘ</span>
+            <strong id="geo-map-coordinate">—</strong>
+          </div>
+        </section>
+
+        <footer class="geo-map-footer">
+          <span>GEOGRAPHY IS NEVER NEUTRAL.</span>
+          <span>ĐỌC THẾ GIỚI QUA KHÔNG GIAN.</span>
+        </footer>
+      </main>
+
+    </div>
+  </div>
+
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/nhung-tu-nhan-dia-ly.css' | relative_url }}"
+  >
+
+  <script
+    defer
+    src="{{ '/assets/js/nhung-tu-nhan-dia-ly.js' | relative_url }}"
+  ></script>
+
+</body>
+</html>
