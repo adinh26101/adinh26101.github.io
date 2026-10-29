@@ -961,7 +961,9 @@
 
       if (!(key in layerState)) return;
 
-      layerState[key] = checkbox.checked;
+      layerState[key] = key === "countries" ? false : checkbox.checked;
+
+      checkbox.checked = layerState[key];
 
       checkbox.addEventListener("change", () => {
         layerState[key] = checkbox.checked;
